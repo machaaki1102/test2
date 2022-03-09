@@ -15,6 +15,7 @@ dash = "^2.2.0"
 dash-core-components = "^2.0.0"
 numpy = "^1.22.3"
 
+
 [tool.poetry.dev-dependencies]
 
 [build-system]
