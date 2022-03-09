@@ -72,3 +72,4 @@ st.write(df7.head())
 
 fig7 = px.bar(df7, x='Country', y='Value', color='TIME')
 fig7
+
