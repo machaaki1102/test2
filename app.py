@@ -22,4 +22,4 @@ fig=px.sunburst(df,path = ['smoker','day','time','sex'],values='total_bill')
 st.write(fig)
 
 df1 = pd.read_csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/1_OneNum.csv")
-df1.head()
+st.write(df1.head())
