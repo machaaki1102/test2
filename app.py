@@ -46,10 +46,11 @@ app.layout = html.Div([
 @app.callback(
     Output("splom", "figure"), 
     [Input("dropdown", "value")])
+
 def update_bar_chart(dims):
     fig = px.scatter_matrix(
         df2, dimensions=dims, color="species")
-    return fig
+    return fig2
 
-st.write(fig)
+st.write(fig2)
 #app.run_server(debug=True)
