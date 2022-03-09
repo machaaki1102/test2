@@ -83,5 +83,5 @@ fig
 #df8 = pd.read_csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/18_ListGPSCoordinatesWithValue.csv",sep=" ")
 #st.write(df8.head())
 #fig8 = px.scatter_mapbox(df8, lat="lat", lon="long", 
-                        size="pop",hover_name="name",zoom=5)
+#                        size="pop",hover_name="name",zoom=5)
 #fig8
