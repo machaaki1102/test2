@@ -21,5 +21,5 @@ df = px.data.tips()
 fig=px.sunburst(df,path = ['smoker','day','time','sex'],values='total_bill')
 st.write(fig)
 
-gdf = gpd.read_file(“data/malmo-pop.shp”)
+gdf = gpd.read_file('data/malmo-pop.shp')
 st.write(gdf.head())
