@@ -12,6 +12,7 @@ matplotlib = "^3.5.1"
 seaborn = "^0.11.2"
 plotly = "^5.6.0"
 dash = "^2.2.0"
+dash-core-components = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 
