@@ -50,5 +50,6 @@ def update_bar_chart(dims):
     fig = px.scatter_matrix(
         df, dimensions=dims, color="species")
     return fig
-
-app.run_server(debug=True)
+    
+st.write(fig)
+#app.run_server(debug=True)
