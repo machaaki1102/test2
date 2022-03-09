@@ -26,3 +26,6 @@ st.write(df1.head())
 
 fig = px.histogram(df1, x="price", range_x=(0,3000),nbins=1000,opacity=0.5,marginal="violin") 
 st.write(fig)
+
+iris = px.data.iris()
+st.write(iris.head())
