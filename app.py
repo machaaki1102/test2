@@ -16,5 +16,7 @@ import plotly.express as px
 #df = pd.read_csv(url)
 #st.write(df)
 
+#px.data.tipsにいくつかデータが入っている
+df = px.data.tips()
 fig=px.sunburst(df,path = ['smoker','day','time','sex'],values='total_bill')
 st.write(fig.show())
