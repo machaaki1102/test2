@@ -62,7 +62,7 @@ fig5 = px.scatter_matrix(df5,
 fig5
 
 df6 = pd.read_csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum.csv")
-st.wite(df6.head())
+st.write(df6.head())
 
 fig6 = px.bar(df6,x='Country',y='Value')
 fig6
