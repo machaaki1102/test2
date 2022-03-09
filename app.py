@@ -6,6 +6,7 @@ import seaborn as sns
 import os
 from matplotlib.backends.backend_agg import RendererAgg
 import plotly.express as px
+import geopandas as gpd
 
 #gdp グラフ
 #df4 = px.data.gapminder()
@@ -21,5 +22,6 @@ df = px.data.tips()
 fig=px.sunburst(df,path = ['smoker','day','time','sex'],values='total_bill')
 st.write(fig)
 
-gdf = gpd.read_file('data/malmo-pop.shp')
+
+df = gpd.read_file('data/malmo-pop.shp')
 st.write(gdf.head())
