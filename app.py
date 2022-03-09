@@ -1,27 +1,8 @@
-import streamlit as st 
+# Solution to bar challenge.
+# Changed code lines 64 to 71
+
 import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
-import seaborn as sns
-import os
-from matplotlib.backends.backend_agg import RendererAgg
+import plotly.express as px  # (version 4.7.0)
 
-#Loading the data
-@st.cache
-def get_data_deputies():
-     return pd.read_csv(os.path.join(os.getcwd(),'df_dep.csv'))
-@st.cache
-def get_data_political_parties():
-     return pd.read_csv(os.path.join(os.getcwd(),'df_polpar.csv'))
-
-#configuration of the page
-st.set_page_config(layout="wide")
-#load dataframes
-df_dep = get_data_deputies()
-df_pol_par = get_data_political_parties()
-st.title('French national assembly vizualisation tool')
-st.markdown("""
-This app performs simple visualization from the open data from the french national assembly!
-""")
-st.write(df_dep)
-st.write(df_pol_par)
+df4 = px.data.gapminder()
+df4.head()
