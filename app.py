@@ -6,7 +6,6 @@ import seaborn as sns
 import os
 from matplotlib.backends.backend_agg import RendererAgg
 import plotly.express as px
-import geopandas as gpd
 
 #gdp グラフ
 #df4 = px.data.gapminder()
