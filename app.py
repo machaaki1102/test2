@@ -27,5 +27,11 @@ st.write(df1.head())
 fig = px.histogram(df1, x="price", range_x=(0,3000),nbins=1000,opacity=0.5,marginal="violin") 
 st.write(fig)
 
-iris = px.data.iris()
-st.write(iris.head())
+#iris = px.data.iris()
+#st.write(iris.head())
+
+df2 = pd.read_csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/2_TwoNum.csv")
+st.write(df2.head())
+
+fig2 = px.scatter(df2, x="GrLivArea", y="SalePrice", marginal_y="rug", marginal_x="histogram")
+st.write(fig2)
