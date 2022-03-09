@@ -42,12 +42,12 @@ st.write(fig2)
 df3 = pd.read_csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/3_TwoNumOrdered.csv",sep=" ")
 st.write(df3.head())
 
-fig = px.line(df3, x="date", y="value")
-st.write(fig)
+fig3 = px.line(df3, x="date", y="value")
+st.write(fig3)
 
 df4 = px.data.gapminder()
 st.write(df4.head())
 
 st.title('GAP')
-fig = px.scatter(df4, x="gdpPercap", y="lifeExp", size="pop",color="continent",hover_name="country",animation_frame="year")
-st.wtire(fig)
+fig4 = px.scatter(df4, x="gdpPercap", y="lifeExp", size="pop",color="continent",hover_name="country",animation_frame="year")
+st.wtire(fig4)
