@@ -47,3 +47,7 @@ st.write(fig)
 
 df4 = px.data.gapminder()
 st.write(df4.head())
+
+st.title('GAP')
+fig = px.scatter(df4, x="gdpPercap", y="lifeExp", size="pop",color="continent",hover_name="country",animation_frame="year")
+st.wtire(fig)
