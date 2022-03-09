@@ -50,4 +50,4 @@ st.write(df4.head())
 
 st.title('GAP')
 fig4 = px.scatter(df4, x="gdpPercap", y="lifeExp", size="pop",color="continent",hover_name="country",animation_frame="year")
-st.wtire(fig4)
+fig4
