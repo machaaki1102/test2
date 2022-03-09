@@ -48,8 +48,8 @@ app.layout = html.Div([
     [Input("dropdown", "value")])
 def update_bar_chart(dims):
     fig = px.scatter_matrix(
-        df, dimensions=dims, color="species")
+        df2, dimensions=dims, color="species")
     return fig
-    
+
 st.write(fig)
 #app.run_server(debug=True)
