@@ -21,36 +21,5 @@ df = px.data.tips()
 fig=px.sunburst(df,path = ['smoker','day','time','sex'],values='total_bill')
 st.write(fig)
 
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
-
-df2 = px.data.iris()
-all_dims = ['sepal_length', 'sepal_width', 
-            'petal_length', 'petal_width']
-
-app = dash.Dash(__name__)
-
-app.layout = html.Div([
-    dcc.Dropdown(
-        id="dropdown",
-        options=[{"label": x, "value": x} 
-                 for x in all_dims],
-        value=all_dims[:2],
-        multi=True
-    ),
-    dcc.Graph(id="splom"),
-])
-
-@app.callback(
-    Output("splom", "figure"), 
-    [Input("dropdown", "value")])
-
-def update_bar_chart(dims):
-    fig2 = px.scatter_matrix(
-        df2, dimensions=dims, color="species")
-    return fig2
-
-#st.write(update_bar_chart())
-app.run_server(debug=True)
+gdf = gpd.read_file(“data/malmo-pop.shp”)
+st.write(gdf.head())
