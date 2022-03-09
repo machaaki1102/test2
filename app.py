@@ -1,6 +1,4 @@
-# Solution to bar challenge.
-# Changed code lines 64 to 71
-
+import stramlit as st
 import pandas as pd
 import plotly.express as px  # (version 4.7.0)
 
