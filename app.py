@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 from matplotlib.backends.backend_agg import RendererAgg
+import plotly.express as px
 
 #gdp グラフ
 #df4 = px.data.gapminder()
@@ -15,16 +16,5 @@ from matplotlib.backends.backend_agg import RendererAgg
 #df = pd.read_csv(url)
 #st.write(df)
 
-#configuration of the page
-st.set_page_config(layout="wide")
-#load dataframes
-a = 'https://github.com/max-lutz/national-assembly/blob/main/data/df_dep.csv'
-url2 = 'https://github.com/max-lutz/national-assembly/blob/main/data/df_polpar.csv'
-df_dep = pd.read_csv(a)
-df_pol_par = pd.read_csv(url2)
-st.title('French national assembly vizualisation tool')
-st.markdown("""
-This app performs simple visualization from the open data from the french national assembly!
-""")
-st.write(df_dep)
-st.write(df_pol_par)
+fig=px.sunburst(df,path = ['smoker','day','time','sex'],values='total_bill')
+st.write(fig.show())
