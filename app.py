@@ -44,3 +44,6 @@ st.write(df3.head())
 
 fig = px.line(df3, x="date", y="value")
 st.write(fig)
+
+df4 = px.data.gapminder()
+st.write(df4.head())
