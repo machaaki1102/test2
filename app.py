@@ -18,9 +18,9 @@ from matplotlib.backends.backend_agg import RendererAgg
 #configuration of the page
 st.set_page_config(layout="wide")
 #load dataframes
-url = 'https://github.com/max-lutz/national-assembly/blob/main/data/df_dep.csv'
+a = 'https://github.com/max-lutz/national-assembly/blob/main/data/df_dep.csv'
 url2 = 'https://github.com/max-lutz/national-assembly/blob/main/data/df_polpar.csv'
-df_dep = pd.read_csv(url)
+df_dep = pd.read_csv(a)
 df_pol_par = pd.read_csv(url2)
 st.title('French national assembly vizualisation tool')
 st.markdown("""
