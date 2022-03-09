@@ -52,5 +52,5 @@ def update_bar_chart(dims):
         df2, dimensions=dims, color="species")
     return fig2
 
-st.write(fig2)
+update_bar_chart()
 #app.run_server(debug=True)
