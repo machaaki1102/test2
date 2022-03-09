@@ -56,6 +56,7 @@ df5 = pd.read_csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/E
 st.write(df5.head())
 
 st.title('相関の可視化')
+st.subtitle('相関の可視化')
 fig5 = px.scatter_matrix(df5, 
                         dimensions=["mpg", "disp", "drat", "hp", "qsec", "wt"], 
                         color="gear")
