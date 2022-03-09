@@ -66,3 +66,9 @@ st.write(df6.head())
 
 fig6 = px.bar(df6,x='Country',y='Value')
 fig6
+
+df7 = pd.read_csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/9_OneNumSevCatSubgroupOneObs.csv")
+st.write(df7.head())
+
+fig7 = px.bar(df7, x='Country', y='Value', color='TIME')
+fig7
