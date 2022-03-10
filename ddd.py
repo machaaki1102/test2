@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import numpy as np
-import PIL.ExifTags as Exiftags
+import PIL.ExifTags as ExifTags
 
 #写真から緯度経度をとる。
 def get_gps(fname):
