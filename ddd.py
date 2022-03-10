@@ -44,11 +44,11 @@ exif = {
   if k in ExifTags.TAGS
 }
 # GPS情報を得る --- (*2)
-gps_tags = exif["GPSInfo"]
-gps = {
-  ExifTags.GPSTAGS.get(t, t): gps_tags[t]
-  for t in gps_tags
-}
+#gps_tags = exif["GPSInfo"]
+#gps = {
+#  ExifTags.GPSTAGS.get(t, t): gps_tags[t]
+#  for t in gps_tags
+#}
 
 st.write(exif)
 #body
