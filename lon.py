@@ -1,4 +1,4 @@
-import stremalit as st
+import streamlit as st
 import pandas as pd
 from pillow import Image
 import numpy as np
