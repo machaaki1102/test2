@@ -7,8 +7,9 @@ import PIL.ExifTags as Exiftags
 
 st.title('画像から緯度・経度取得')
 #img = st.file_uploader('写真アップロード',type='jpg')
-im = Image.open('DSC_0106.JPG')
+img = Image.open('DSC_0106.JPG')
 #st.image(im)
+#EXIF情報をとる。
 exif = img._getexif()
 for id,value in exif.items():
     st.write(id,value)
