@@ -10,9 +10,9 @@ def get_gps(fname):
     im = Image.open(fname)
     # EXIF情報を辞書型で得る
     exif = {
-            ExifTags.TAGS[k]: v
-            for k, v in im._getexif().items()
-                if k in ExifTags.TAGS
+        ExifTags.TAGS[k]: v
+        for k, v in im._getexif().items()
+            if k in ExifTags.TAGS
     }
     # GPS情報を得る --- (*2)
     gps_tags = exif["GPSInfo"]
