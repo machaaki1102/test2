@@ -27,4 +27,4 @@ def get_gps(frame):
         for i in gps_tags
     }
  #緯度経度情報を得る
-               
+ 
