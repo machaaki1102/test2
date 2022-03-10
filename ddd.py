@@ -7,11 +7,11 @@ import PIL.ExifTags as Exiftags
 
 st.title('画像から緯度・経度取得')
 img = st.file_uploader('写真アップロード',type='jpg')
-exif = img._getexif()
-
+if img is True:
+    exif = img._getexif()
 #sデータの一覧
-for id,value in exif.items():
-    st.write(id,value)
+    for id,value in exif.items():
+        st.write(id,value)
 
 def get_gps(frame):
 #画像ファイルを開く
