@@ -90,3 +90,7 @@ df10 = px.data.gapminder()
 st.write(df10.head())
 fig10 = px.choropleth(df10, locations="iso_alpha", locationmode = "ISO-3", color="lifeExp", hover_name="country", animation_frame="year")
 fig10
+
+iris = px.data.iris()
+fig11 = px.parallel_coordinates(iris,color='species_id')
+fig11
