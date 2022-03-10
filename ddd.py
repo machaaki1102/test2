@@ -21,8 +21,8 @@ def get_gps(fname):
         for t in gps_tags
     }
     # 緯度経度情報を得る --- (*3)
+    # 分数を度に変換
     def conv_deg(v):
-        # 分数を度に変換
         d = float(v[0][0]) / float(v[0][1])
         m = float(v[1][0]) / float(v[1][1])
         s = float(v[2][0]) / float(v[2][1])
