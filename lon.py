@@ -7,7 +7,7 @@ import pillow.exiftags as Exiftags
 st.titile('画像から緯度・経度取得')
 img = st.file_uploader('写真アップロード',type='jpg')
 exif = img._getexif()
-
+#
 #データの一覧
 for id,value in exif.items():
     st.write(id,value)
