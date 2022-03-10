@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from pillow import Image
+from PIL import Image
 import numpy as np
 import pillow.exiftags as Exiftags
 
