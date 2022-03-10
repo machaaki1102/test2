@@ -54,6 +54,3 @@ st.write(f'経度:{lat}緯度:{lon}')
 ##sデータの一覧
 #    for id,value in exif.items():
 #        st.write(id,value)
-
-
-lat, lon = get_gps()
