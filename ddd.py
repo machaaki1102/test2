@@ -12,7 +12,7 @@ def get_gps(fname):
     exif = {
         ExifTags.TAGS[k]: v
         for k, v in im._getexif().items()
-            if k in ExifTags.TAGS
+        if k in ExifTags.TAGS
     }
     # GPS情報を得る --- (*2)
     gps_tags = exif["GPSInfo"]
