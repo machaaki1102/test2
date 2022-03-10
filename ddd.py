@@ -58,7 +58,7 @@ gps = {
   for t in gps_tags
 }
 #gps_tags
-gps
+st.write(gps)
 
 
 #body
