@@ -94,3 +94,8 @@ fig10
 iris = px.data.iris()
 fig11 = px.parallel_coordinates(iris,color='species_id')
 fig11
+
+tips = px.data.tips()
+st.write(tips.head())
+fig12 = px.parallel_categories(tips,color='size')
+fig12
