@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import numpy as np
-import pillow.exiftags as Exiftags
+import PIL.ExifTags as Exiftags
+
 
 st.titile('画像から緯度・経度取得')
 img = st.file_uploader('写真アップロード',type='jpg')
