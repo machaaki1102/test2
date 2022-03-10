@@ -45,6 +45,21 @@ st.wite(f'経度:{lat}緯度:{lon}')
 #写真表示
 #st.image(im)
 
+im = Image.open('IMG_1010.JPG')
+exif = {
+  ExifTags.TAGS[k]: v
+  for k, v in im._getexif().items()
+  if k in ExifTags.TAGS
+}
+# GPS情報を得る --- (*2)
+gps_tags = exif["GPSInfo"]
+gps = {
+  ExifTags.GPSTAGS.get(t, t): gps_tags[t]
+  for t in gps_tags
+}
+#gps_tags
+gps
+
 
 #body
 st.title('画像から緯度・経度取得')
