@@ -35,7 +35,7 @@ def get_gps(fname):
     if lon_ref != "E": lon = 0 - lon
     return lat, lon
 
-
+#
 
 im = Image.open('IMG_1010.JPG')
 exif = {
