@@ -27,13 +27,13 @@ def get_gps(fname):
         m = float(v[1][0]) / float(v[1][1])
         s = float(v[2][0]) / float(v[2][1])
         return d + (m / 60.0) + (s / 3600.0)
-    lat = conv_deg(gps["GPSLatitude"])
-    lat_ref = gps["GPSLatitudeRef"]
-    if lat_ref != "N": lat = 0 - lat
-    lon = conv_deg(gps["GPSLongitude"])
-    lon_ref = gps["GPSLongitudeRef"]
-    if lon_ref != "E": lon = 0 - lon
-    return lat, lon
+        lat = conv_deg(gps["GPSLatitude"])
+        lat_ref = gps["GPSLatitudeRef"]
+        if lat_ref != "N": lat = 0 - lat
+        lon = conv_deg(gps["GPSLongitude"])
+        lon_ref = gps["GPSLongitudeRef"]
+        if lon_ref != "E": lon = 0 - lon
+        return lat, lon
 
 
 #body
