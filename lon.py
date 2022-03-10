@@ -11,7 +11,7 @@ exif = img._getexif()
 #データの一覧
 for id,value in exif.items():
     st.write(id,value)
-#
+
 def get_gps(frame):
 #画像ファイルを開く
     im = Image.oepn(frame)
