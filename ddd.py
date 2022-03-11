@@ -67,7 +67,7 @@ gps = {
 
 #st.write(gps)
 st.write(float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/1000000))
-
+#
 #body
 st.title('画像から緯度・経度取得')
 #img = st.file_uploader('写真アップロード',type='jpg')
