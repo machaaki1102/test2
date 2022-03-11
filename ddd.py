@@ -52,7 +52,7 @@ exif = {
 #  for t in gps_tags
 #}
 
-st.write(im._getexif().items())
+st.write(exif)
 #body
 st.title('画像から緯度・経度取得')
 #img = st.file_uploader('写真アップロード',type='jpg')
