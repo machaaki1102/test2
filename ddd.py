@@ -64,7 +64,7 @@ def chape(img):
   }
   lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/10000)
   lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)+float(gps["GPSLongitude"][2]/10000)
-
+  return lat,lon
 #body
 st.title('画像から緯度・経度取得')
 img = Image.open('IMG_1010.JPG')
