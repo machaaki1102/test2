@@ -4,51 +4,10 @@ from PIL import Image
 import numpy as np
 import PIL.ExifTags as ExifTags
 
-#写真から緯度経度をとる。
-def get_gps(fname):
-    # 画像ファイルを開く --- (*1)
-    im = Image.open(fname)
-    # EXIF情報を辞書型で得る
-    exif = {
-        ExifTags.TAGS[k]: v
-        for k, v in im._getexif().items()
-        if k in ExifTags.TAGS
-    }
-    # GPS情報を得る --- (*2)
-    gps_tags = exif["GPSInfo"]
-    gps = {
-        ExifTags.GPSTAGS.get(t, t): gps_tags[t]
-        for t in gps_tags
-    }
-    # 緯度経度情報を得る --- (*3)
-    # 分数を度に変換
-    def conv_deg(v):
-        d = float(v[0][0]) / float(v[0][1])
-        m = float(v[1][0]) / float(v[1][1])
-        s = float(v[2][0]) / float(v[2][1])
-        return d + (m / 60.0) + (s / 3600.0)
-    lat = gps["GPSLatitude"]
-    lat_ref = gps["GPSLatitudeRef"]
-    if lat_ref != "N": lat = 0 - lat
-    lon = conv_deg(gps["GPSLongitude"])
-    lon_ref = gps["GPSLongitudeRef"]
-    if lon_ref != "E": lon = 0 - lon
-    return lat, lon
-
-#    def conv_deg(v):
-#        d = float(v[0]) / float(v[0][1])
-#        m = float(v[1][0]) / float(v[1][1])
-#        s = float(v[2][0]) / float(v[2][1])
-#        return d + (m / 60.0) + (s / 3600.0)
-#    lat = conv_deg(gps["GPSLatitude"])
-#    lat_ref = gps["GPSLatitudeRef"]
-#    if lat_ref != "N": lat = 0 - lat
-#    lon = conv_deg(gps["GPSLongitude"])
-#    lon_ref = gps["GPSLongitudeRef"]
-#    if lon_ref != "E": lon = 0 - lon
-#    return lat, lon
 
 #img　に入った画像の経度緯度を取る。
+
+#parts
 def chape(img):
 #  img = Image.open('IMG_1010.JPG')
   exif = {
@@ -65,12 +24,14 @@ def chape(img):
   lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/10000)
   lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)+float(gps["GPSLongitude"][2]/10000)
   return lat,lon
+
 #body
 st.title('画像から緯度・経度取得')
-img = Image.open('IMG_1010.JPG')
-#img = st.file_uploader('写真アップロード',type='jpg')
-lat,lon = chape(img)#lat,lon = get_gps('IMG_1010.JPG')
-st.write(f'経度:{lat}緯度:{lon}')
+#img = Image.open('IMG_1010.JPG')
+img = st.file_uploader('写真アップロード',type='jpg')
+if img:
+  lat,lon = chape(img)
+  st.write(f'経度:{lat}緯度:{lon}')
 #st.write(f'経度:{lat}緯度:{lon}')
 #写真表示
 #st.image(im)
