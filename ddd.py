@@ -65,9 +65,8 @@ gps = {
   for t in gps_tags
 }
 
-aast.write(gps)
-#st.write(float(gps["GPSLatitude"][0])+
-#        fgps["GPSLatitude"][1]/100+gps["GPSLatitude"][2]/100000)
+#st.write(gps)
+st.write(float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/1000000)
 
 #body
 st.title('画像から緯度・経度取得')
