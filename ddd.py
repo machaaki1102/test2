@@ -38,6 +38,8 @@ def get_gps(fname):
 #
 
 im = Image.open('IMG_1010.JPG')
+#v = []
+
 exif = {
   ExifTags.TAGS[k]: v
   for k, v in im._getexif().items()
