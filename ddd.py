@@ -69,7 +69,7 @@ def chape(img):
 st.title('画像から緯度・経度取得')
 img = Image.open('IMG_1010.JPG')
 #img = st.file_uploader('写真アップロード',type='jpg')
-chape(img)#lat,lon = get_gps('IMG_1010.JPG')
+lat,lon = chape(img)#lat,lon = get_gps('IMG_1010.JPG')
 st.write(f'経度:{lat}緯度:{lon}')
 #st.write(f'経度:{lat}緯度:{lon}')
 #写真表示
