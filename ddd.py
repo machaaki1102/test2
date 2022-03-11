@@ -22,11 +22,11 @@ def get_gps(fname):
     }
     # 緯度経度情報を得る --- (*3)
     # 分数を度に変換
-#    def conv_deg(v):
-#        d = float(v[0][0]) / float(v[0][1])
-#        m = float(v[1][0]) / float(v[1][1])
-#        s = float(v[2][0]) / float(v[2][1])
-#        return d + (m / 60.0) + (s / 3600.0)
+    def conv_deg(v):
+        d = float(v[0][0]) / float(v[0][1])
+        m = float(v[1][0]) / float(v[1][1])
+        s = float(v[2][0]) / float(v[2][1])
+        return d + (m / 60.0) + (s / 3600.0)
     lat = gps["GPSLatitude"]
     lat_ref = gps["GPSLatitudeRef"]
     if lat_ref != "N": lat = 0 - lat
@@ -36,7 +36,7 @@ def get_gps(fname):
     return lat, lon
 
 #    def conv_deg(v):
-#        d = float(v[0][0]) / float(v[0][1])
+#        d = float(v[0]) / float(v[0][1])
 #        m = float(v[1][0]) / float(v[1][1])
 #        s = float(v[2][0]) / float(v[2][1])
 #        return d + (m / 60.0) + (s / 3600.0)
@@ -66,7 +66,7 @@ gps = {
 }
 
 #st.write(gps)
-st.write(gps["GPSLatitude"][0])
+st.write(gps["GPSLatitude"][0]+gps["GPSLatitude"][1]/100+gps["GPSLatitude"][2]/100000)
 
 #body
 st.title('画像から緯度・経度取得')
