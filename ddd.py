@@ -29,9 +29,15 @@ def chape(img):
 st.title('画像から緯度・経度取得')
 img = Image.open('IMG_1010.JPG')
 #img = st.file_uploader('写真アップロード',type='jpg')
-if img:
-  lat,lon = chape(img)
-  st.write(f'経度:{lat}緯度:{lon}')
+lat,lon = chape(img)
+st.write(f'経度:{lat}緯度:{lon}')
+
+px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
+df9 = pd.read_csv('covid19.csv')
+fig9 = px.scatter_mapbox(df9,lat="lat", lon="lon",size="pop",color="pop",size_max=80,zoom=3, height=500)
+fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+fig9
+
 #st.write(f'経度:{lat}緯度:{lon}')
 #写真表示
 #st.image(im)
