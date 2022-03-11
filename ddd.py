@@ -66,7 +66,7 @@ gps = {
 }
 
 #st.write(gps)
-st.write(gps["GPSLatitude"])
+st.write(gps["GPSLatitude"][0])
 
 #body
 st.title('画像から緯度・経度取得')
