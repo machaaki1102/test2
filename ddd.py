@@ -50,12 +50,12 @@ def get_gps(fname):
 
 #
 
-im = Image.open('IMG_1010.JPG')
+img = Image.open('IMG_1010.JPG')
 #v = []
 
 exif = {
   ExifTags.TAGS[k]: v
-  for k, v in im._getexif().items()
+  for k, v in img._getexif().items()
   if k in ExifTags.TAGS
 }
 # GPS情報を得る --- (*2)
@@ -65,9 +65,8 @@ gps = {
   for t in gps_tags
 }
 
-#st.write(gps)
-st.write(float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/10000))
-st.write(float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)+float(gps["GPSLongitude"][2]/10000))
+lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/10000)
+lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)+float(gps["GPSLongitude"][2]/10000)
 #body
 st.title('画像から緯度・経度取得')
 #img = st.file_uploader('写真アップロード',type='jpg')
