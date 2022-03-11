@@ -3,6 +3,7 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 import PIL.ExifTags as ExifTags
+import plotly.express as px
 
 
 #img　に入った画像の経度緯度を取る。
