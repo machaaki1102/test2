@@ -46,13 +46,13 @@ exif = {
   if k in ExifTags.TAGS
 }
 # GPS情報を得る --- (*2)
-#gps_tags = exif["GPSInfo"]
-#gps = {
-#  ExifTags.GPSTAGS.get(t, t): gps_tags[t]
-#  for t in gps_tags
-#}
+gps_tags = exif["GPSInfo"]
+gps = {
+  ExifTags.GPSTAGS.get(t, t): gps_tags[t]
+  for t in gps_tags
+}
 
-st.write(exif)
+st.write(gps)
 #body
 st.title('画像から緯度・経度取得')
 #img = st.file_uploader('写真アップロード',type='jpg')
