@@ -35,10 +35,10 @@ lat,lon = chape(img)
 st.write(f'経度:{lat}緯度:{lon}')
 
 df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
-st.write(df9)
+st.write(df9.type)
 px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
 #df9 = pd.read_csv('covid19.csv')
-#fig9 = px.scatter_mapbox(df9,lat="lat", lon="lon",size="pop",color="pop",size_max=80,zoom=3, height=500)
+fig9 = px.scatter_mapbox(df9,lat="lat", lon="lon",size="pop",color="pop",size_max=80,zoom=3, height=500)
 #fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 #fig9
 
