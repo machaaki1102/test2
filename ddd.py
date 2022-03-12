@@ -50,7 +50,8 @@ fig9 = px.scatter_mapbox(
   zoom=3,
   height=500)
 #fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-#fig9
+fig9 = fig.update_layout(mapbox_style='open-street-map')
+fig9
 
 #st.write(f'経度:{lat}緯度:{lon}')
 #写真表示
