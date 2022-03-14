@@ -38,7 +38,7 @@ st.write(f'経度:{lat}緯度:{lon}')
 
 #マップングする。
 df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
-st.write(type(df9))
+st.write(df9)
 px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
 #df9 = pd.read_csv('covid19.csv')
 fig9 = px.scatter_mapbox(
