@@ -45,12 +45,12 @@ fig9 = px.scatter_mapbox(
   data_frame=df9,
   lat="lat",
   lon="lon",
-  size=10,
+  size="pop",
   size_max=80,
-  zoom=3,
+  zoom=5,
   height=500)
-#fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-fig9 = fig.update_layout(mapbox_style='open-street-map')
+fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+fig9 = fig9.update_layout(mapbox_style='open-street-map')
 fig9
 
 #st.write(f'経度:{lat}緯度:{lon}')
