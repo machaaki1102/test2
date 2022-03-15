@@ -58,6 +58,7 @@ st.title('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真アップロード',type='jpg')
 st.image(img)
+st.write(img._getexif().items())
 
 exif = {
   ExifTags.TAGS[k]: v
