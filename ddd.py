@@ -30,11 +30,11 @@ def chape(img):
   return lat,lon
 
 #body
-st.title('画像から緯度・経度取得')
-img = Image.open('IMG_1010.JPG')
-img = st.file_uploader('写真アップロード',type='jpg')
-lat,lon = chape(img)
-st.write(f'経度:{lat}緯度:{lon}')
+#st.title('画像から緯度・経度取得')
+#img = Image.open('IMG_1010.JPG')
+#img = st.file_uploader('写真アップロード',type='jpg')
+#lat,lon = chape(img)
+#st.write(f'経度:{lat}緯度:{lon}')
 
 #マップングする。基
 #df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
