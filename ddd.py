@@ -65,6 +65,7 @@ exif = {
   if k in ExifTags.TAGS
 }
 if img:
+  st.write(1)
   st.write(exif)
 
 #if img:
