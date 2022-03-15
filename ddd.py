@@ -66,26 +66,26 @@ exif = {
 
 st.write(exif)
 
-if img:
-  lat,lon = chape(img)
-  st.write(f'経度:{lat}緯度:{lon}')
-
+#if img:
+#  lat,lon = chape(img)
+#  st.write(f'経度:{lat}緯度:{lon}')
+#
 #マップングする。
-  df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
-  st.write(df9)
-  px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
+#  df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
+#  st.write(df9)
+#  px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
 #df9 = pd.read_csv('covid19.csv')
-  fig9 = px.scatter_mapbox(
-   data_frame=df9,
-   lat="lat",
-   lon="lon",
-   size="lat",
-   size_max=10,
-   zoom=5,
-   height=500)
-  fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-  fig9 = fig9.update_layout(mapbox_style='open-street-map')
-  fig9
+#  fig9 = px.scatter_mapbox(
+#   data_frame=df9,
+#   lat="lat",
+#   lon="lon",
+#   size="lat",
+#   size_max=10,
+#   zoom=5,
+#   height=500)
+#  fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+#  fig9 = fig9.update_layout(mapbox_style='open-street-map')
+#  fig9
 
 
 
