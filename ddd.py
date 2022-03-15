@@ -63,8 +63,8 @@ exif = {
   for k, v in img._getexif().items()
   if k in ExifTags.TAGS
 }
-
-st.write(exif)
+if img:
+  st.write(exif)
 
 #if img:
 #  lat,lon = chape(img)
