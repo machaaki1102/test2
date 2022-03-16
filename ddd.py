@@ -30,7 +30,8 @@ def chape(img):
 #body
 st.title('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
-img = st.file_uploader('写真アップロード',type='jpg')
+#img = st.file_uploader('写真アップロード',type='jpg')
+img = st.camera_input('Take a picure')
 
 if img:
   img = Image.open(img)
