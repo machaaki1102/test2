@@ -54,3 +54,26 @@ if img:
   fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
   fig9 = fig9.update_layout(mapbox_style='open-street-map')
   fig9
+
+
+img = Image.open('IMG_5655.JPG')
+st.write(img._getexif().items())
+
+def chape(img):
+  exif = {
+    ExifTags.TAGS[k]: v
+    for k, v in img._getexif().items()
+    if k in ExifTags.TAGS
+  }
+# GPS情報を得る --- (*2)
+  gps_tags = exif["GPSInfo"]
+  gps = {
+    ExifTags.GPSTAGS.get(t, t): gps_tags[t]
+    for t in gps_tags
+  }
+#  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/10000)
+#  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)+float(gps["GPSLongitude"][2]/10000)
+  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)
+  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
+  return lat,lon
+
