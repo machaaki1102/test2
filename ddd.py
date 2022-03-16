@@ -60,6 +60,7 @@ img = st.file_uploader('写真アップロード',type='jpg')
 img = Image.open(img)
 #st.write(StringIO(img.getvalue().decode("utf-8")))
 lat,lon = chape(img)
+st.write(lat)
 st.image(img)
 st.write(img._getexif().items())
 
