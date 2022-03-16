@@ -57,7 +57,7 @@ def chape(img):
 st.title('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真アップロード',type='jpg')
-Image.open(img)
+img = Image.open(img)
 #st.write(StringIO(img.getvalue().decode("utf-8")))
 st.image(img)
 st.write(img._getexif().items())
