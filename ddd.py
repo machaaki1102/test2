@@ -3,7 +3,6 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 import PIL.ExifTags as ExifTags
-import numpy as np
 import plotly.express as px
 
 
@@ -33,7 +32,7 @@ st.title('画像から緯度・経度取得')
 img = st.file_uploader('写真アップロード',type='jpg')
 #img = st.camera_input('Take a picure')
 
-#if img:
+#if img is not None:
 #  img = Image.open(img)
 #  lat,lon = chape(img)
 #  st.write(f'経度:{lat}緯度:{lon}')
@@ -58,5 +57,13 @@ img = st.file_uploader('写真アップロード',type='jpg')
 
 #img = Image.open('IMG_5655.JPG')
 img = Image.open(img)
+exif = {
+   ExifTags.TAGS[k]: v
+   for k, v in img._getexif().items()
+   if k in ExifTags.TAGS
+}
+st.write(exif)
+
+
 lat,lon = chape(img)
 st.write(lat,lon)
