@@ -59,6 +59,7 @@ st.title('画像から緯度・経度取得')
 img = st.file_uploader('写真アップロード',type='jpg')
 img = Image.open(img)
 #st.write(StringIO(img.getvalue().decode("utf-8")))
+lat,lon = chape(img)
 st.image(img)
 st.write(img._getexif().items())
 
