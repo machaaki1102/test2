@@ -57,13 +57,7 @@ st.title('画像から緯度・経度取得')
 
 
 img = Image.open('IMG_5655.JPG')
-exif = {
-    ExifTags.TAGS[k]: v
-    for k, v in img._getexif().items()
-    if k in ExifTags.TAGS
-  }
-
-st.write(exif)
+st.write(chape(img))
 
 def chape(img):
   exif = {
