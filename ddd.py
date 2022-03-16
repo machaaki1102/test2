@@ -30,7 +30,7 @@ def chape(img):
 #body
 st.title('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
-#img = st.file_uploader('写真アップロード',type='jpg')
+img = st.file_uploader('写真アップロード',type='jpg')
 #img = st.camera_input('Take a picure')
 
 #if img:
@@ -56,7 +56,7 @@ st.title('画像から緯度・経度取得')
 #  fig9
 
 
-img = Image.open('IMG_5655.JPG')
-#img = Image.open(img)
+#img = Image.open('IMG_5655.JPG')
+img = Image.open(img)
 lat,lon = chape(img)
 st.write(lat,lon)
