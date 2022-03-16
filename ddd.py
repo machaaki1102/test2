@@ -57,7 +57,13 @@ if img:
 
 
 img = Image.open('IMG_5655.JPG')
-st.write(img._getexif().items())
+exif = {
+    ExifTags.TAGS[k]: v
+    for k, v in img._getexif().items()
+    if k in ExifTags.TAGS
+  }
+
+st.write(exif)
 
 def chape(img):
   exif = {
