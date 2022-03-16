@@ -56,8 +56,7 @@ img = st.camera_input('Take a picure')
 #  fig9
 
 
-#img = Image.open('IMG_5655.JPG')
-if img:
-  img = Image.open(img)
-  lat,lon = chape(img)
-  st.write(lat,lon)
+img = Image.open('IMG_5655.JPG')
+#img = Image.open(img)
+lat,lon = chape(img)
+st.write(lat,lon)
