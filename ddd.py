@@ -57,6 +57,7 @@ img = st.camera_input('Take a picure')
 
 #img = Image.open('IMG_5655.JPG')
 img = Image.open(img)
+st.write(img._getexif().items())
 exif = {
    ExifTags.TAGS[k]: v
    for k, v in img._getexif().items()
