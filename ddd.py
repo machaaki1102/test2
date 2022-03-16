@@ -58,23 +58,5 @@ img = st.camera_input('Take a picure')
 
 #img = Image.open('IMG_5655.JPG')
 img = Image.open(img)
-st.write(chape(img))
-
-def chape(img):
-  exif = {
-    ExifTags.TAGS[k]: v
-    for k, v in img._getexif().items()
-    if k in ExifTags.TAGS
-  }
-# GPS情報を得る --- (*2)
-  gps_tags = exif["GPSInfo"]
-  gps = {
-    ExifTags.GPSTAGS.get(t, t): gps_tags[t]
-    for t in gps_tags
-  }
-#  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)+float(gps["GPSLatitude"][2]/10000)
-#  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)+float(gps["GPSLongitude"][2]/10000)
-  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)
-  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
-  return lat,lon
-
+lat,lon = chape(img)
+st.write(lat,lon)
