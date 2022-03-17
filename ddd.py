@@ -40,7 +40,7 @@ if chage == "緯度経度":
 if chage == "米カウント":
   st.session_state.hoge = 2
   st.experimental_rerun()
-ss
+
 
 if st.session_state.hoge == 1:
   st.title('画像から緯度・経度取得')
