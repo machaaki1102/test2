@@ -2,7 +2,7 @@ import stremamlit as st
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from google.colab.patches import cv2_imshow
+#from google.colab.patches import cv2_imshow
 
 #1なら出来る
 #src = '/content/drive/MyDrive/Colab Notebooks/making/rice_conunt/out_sample2.jpg'
