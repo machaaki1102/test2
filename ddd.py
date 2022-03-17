@@ -71,10 +71,13 @@ def main():
         # 画像を保存する
         with open(img_path, 'wb') as f:
             f.write(file.read())
-
 main()
 
-img.save("img.jpeg")
+file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
+
+if file:
+  img = Image.open(file)
+  img.save("img.jpeg")
 
 img = Image.open(img)
 st.write(img._getexif().items())
