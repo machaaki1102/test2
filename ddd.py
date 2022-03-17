@@ -62,6 +62,8 @@ if st.session_state.hoge == 1:
     fig9 = fig9.update_layout(mapbox_style='open-street-map')
     fig9
 
+else:
+  st.write('米カウント')
 
 
 #画像の保存,挑戦中
