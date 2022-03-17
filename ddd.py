@@ -29,42 +29,39 @@ def chape(img):
 #body
 st.title('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
-#img = st.file_uploader('写真アップロード',type='jpg')
+img = st.file_uploader('写真アップロード',type='jpg')
 #img = st.camera_input('Take a picure')
 
-#if img is not None:
-#  img = Image.open(img)
-#  lat,lon = chape(img)
-#  st.write(f'経度:{lat}緯度:{lon}')
+if img is not None:
+  img = Image.open(img)
+  lat,lon = chape(img)
+  st.write(f'経度:{lat}緯度:{lon}')
 
 #マップングする。
-#  df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
- # st.write(df9)
-#  px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
- # df9 = pd.read_csv('covid19.csv')
-#  fig9 = px.scatter_mapbox(
-#   data_frame=df9,
-#   lat="lat",
-#   lon="lon",
-#   size="lat",
-#   size_max=10,
-#   zoom=5,
-#   height=500)
-#  fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-#  fig9 = fig9.update_layout(mapbox_style='open-street-map')
-#  fig9
+  df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
+# st.write(df9)
+  px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
+#  df9 = pd.read_csv('covid19.csv')
+  fig9 = px.scatter_mapbox(
+  data_frame=df9,
+  lat="lat",
+  lon="lon",
+  size="lat",
+  size_max=10,
+  zoom=5,
+  height=500)
+  fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+  fig9 = fig9.update_layout(mapbox_style='open-street-map')
+  fig9
 
 
 
+#画像の保存
 
-#img = Image.open('IMG_5655.JPG')
-#img = io.BytesIO(img)
-#bytes_data = img.getvalue()
-#st.write(bytes_data)
-IMG_PATH2 = 'https://github.com/machaaki1102/test2'
+#MG_PATH2 = 'https://github.com/machaaki1102/test2'
 
 #file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
-IMG_PATH = "/app/test2/"
+#IMG_PATH = "/app/test2/"
 def main():
     st.markdown('# 画像を保存するデモ')
     file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
@@ -80,4 +77,4 @@ def main():
         img = Image.open(img_path)
         st.image(img)
 
-main()
+#main()
