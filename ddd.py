@@ -79,3 +79,4 @@ file = st.file_uploader('画像をアップロードしてください.', type=[
 if file:
   img = Image.open(file)
   img.save("img.jpeg")
+  st.write(img)
