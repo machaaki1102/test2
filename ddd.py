@@ -75,7 +75,7 @@ def main():
             f.write(file.read())
 
 #file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
-IMG_PATH = 'imgs'
+IMG_PATH = "/app/test2/"
 def main():
     st.markdown('# 画像を保存するデモ')
     file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
