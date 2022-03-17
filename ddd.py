@@ -61,18 +61,7 @@ st.title('画像から緯度・経度取得')
 #img = io.BytesIO(img)
 #bytes_data = img.getvalue()
 #st.write(bytes_data)
-IMG_PATH = 'https://github.com/machaaki1102/test2'
-
-
-def main():
-    st.markdown('# 画像を保存するデモ')
-    file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
-    if file:
-        st.markdown(f'{file.name} をアップロードしました.')
-        img_path = os.path.join(IMG_PATH, file.name)
-        # 画像を保存する
-        with open(img_path, 'wb') as f:
-            f.write(file.read())
+#IMG_PATH = 'https://github.com/machaaki1102/test2'
 
 #file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
 IMG_PATH = "/app/test2/"
