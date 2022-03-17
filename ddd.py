@@ -30,7 +30,7 @@ def chape(img):
 st.title('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
 #img = st.file_uploader('写真アップロード',type='jpg')
-img = st.camera_input('Take a picure')
+#img = st.camera_input('Take a picure')
 
 #if img is not None:
 #  img = Image.open(img)
@@ -55,6 +55,8 @@ img = st.camera_input('Take a picure')
 #  fig9
 
 
+
+
 #img = Image.open('IMG_5655.JPG')
 #img = io.BytesIO(img)
 #bytes_data = img.getvalue()
@@ -71,22 +73,9 @@ def main():
         # 画像を保存する
         with open(img_path, 'wb') as f:
             f.write(file.read())
-main()
 
 file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
 
 if file:
   img = Image.open(file)
   img.save("img.jpeg")
-
-img = Image.open(img)
-st.write(img._getexif().items())
-exif = {
-   ExifTags.TAGS[k]: v
-   for k, v in img._getexif().items()
-   if k in ExifTags.TAGS
-}
-st.write(exif)
-  
-lat,lon = chape(img)
-st.write(lat,lon)
