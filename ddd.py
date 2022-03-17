@@ -59,6 +59,21 @@ img = st.camera_input('Take a picure')
 #img = io.BytesIO(img)
 #bytes_data = img.getvalue()
 #st.write(bytes_data)
+IMG_PATH = 'https://github.com/machaaki1102/test2'
+
+
+def main():
+    st.markdown('# 画像を保存するデモ')
+    file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
+    if file:
+        st.markdown(f'{file.name} をアップロードしました.')
+        img_path = os.path.join(IMG_PATH, file.name)
+        # 画像を保存する
+        with open(img_path, 'wb') as f:
+            f.write(file.read())
+
+main()
+
 img.save("img.jpeg")
 
 img = Image.open(img)
