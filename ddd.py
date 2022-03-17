@@ -6,13 +6,14 @@ import PIL.ExifTags as ExifTags
 import plotly.express as px
 import os
 
-st.session_state.hoge = 1
+if 'hoge' not in st.session_state:
+  st.session_state.hoge = 1
 #ステージ入れ替え
 chage = st.selectbox("select fanction",["緯度経度","米カウント"])
 
 if chage == "緯度経度":
   st.session_state.hoge = 1
-  st.experimental_rerun()
+#  st.experimental_rerun()
 if chage == "米カウント":
   st.session_state.hoge = 2
   st.experimental_rerun()
