@@ -30,7 +30,7 @@ def chape(img):
 #body
 st.header('画像から緯度・経度取得')
 st.write('写真から緯度経度を取得出来、地図上で表します。')
-st,write('exif情報(位置情報がないものはエラーになります。')
+st.write('※exif情報(位置情報がないものはエラーになります。')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('↓写真アップロードしてみて下さい',type='jpg')
 #img = st.camera_input('Take a picure')
