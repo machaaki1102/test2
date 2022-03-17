@@ -59,6 +59,8 @@ img = st.camera_input('Take a picure')
 #img = io.BytesIO(img)
 #bytes_data = img.getvalue()
 #st.write(bytes_data)
+img.save("img.jpeg")
+
 img = Image.open(img)
 st.write(img._getexif().items())
 exif = {
