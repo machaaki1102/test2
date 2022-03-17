@@ -6,6 +6,7 @@ import PIL.ExifTags as ExifTags
 import plotly.express as px
 import os
 
+chage = st.selectbox("select fanction",["緯度経度","米カウント"])
 #img　に入った画像の経度緯度を取る。ss
 #parts
 def chape(img):
