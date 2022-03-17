@@ -6,6 +6,7 @@ import PIL.ExifTags as ExifTags
 import plotly.express as px
 import os
 
+#ステージ入れ替え
 chage = st.selectbox("select fanction",["緯度経度","米カウント"])
 
 if chage == "緯度経度":
@@ -14,6 +15,7 @@ if chage == "緯度経度":
 if chage == "米カウント":
   st.session_state.hoge = 2
   st.experimental_rerun()
+  
 #img　に入った画像の経度緯度を取る。
 #parts
 def chape(img):
