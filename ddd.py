@@ -28,21 +28,19 @@ def chape(img):
 
 
 #body
-st.write(1)
-if 'hoge' not in st.session_state:
-  st.session_state.hoge = 1
-#ステージ入れ替え
 chage = st.selectbox("select fanction",["緯度経度","米カウント"])
 
+if 'page' not in st.session_state:
+  st.session_state.page = 1
+
+#ステージ入れ替え
 if chage == "緯度経度":
-  st.session_state.hoge = 1
+  st.session_state.page = 1
 #  st.experimental_rerun()
 if chage == "米カウント":
   st.session_state.hoge = 2
   st.experimental_rerun()
-
-
-
+ss
 
 if st.session_state.hoge == 1:
   st.title('画像から緯度・経度取得')
