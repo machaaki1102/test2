@@ -6,19 +6,6 @@ import PIL.ExifTags as ExifTags
 import plotly.express as px
 import os
 
-st.write(1)
-if 'hoge' not in st.session_state:
-  st.session_state.hoge = 1
-#ステージ入れ替え
-chage = st.selectbox("select fanction",["緯度経度","米カウント"])
-
-if chage == "緯度経度":
-  st.session_state.hoge = 1
-#  st.experimental_rerun()
-if chage == "米カウント":
-  st.session_state.hoge = 2
-  st.experimental_rerun()
-
 #img　に入った画像の経度緯度を取る。
 #parts
 def chape(img):
@@ -39,9 +26,24 @@ def chape(img):
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
   return lat,lon
 
-st.write(st.session_state.hoge)
 
 #body
+st.write(1)
+if 'hoge' not in st.session_state:
+  st.session_state.hoge = 1
+#ステージ入れ替え
+chage = st.selectbox("select fanction",["緯度経度","米カウント"])
+
+if chage == "緯度経度":
+  st.session_state.hoge = 1
+#  st.experimental_rerun()
+if chage == "米カウント":
+  st.session_state.hoge = 2
+  st.experimental_rerun()
+
+
+
+
 if st.session_state.hoge == 1:
   st.title('画像から緯度・経度取得')
   #img = Image.open('IMG_1010.JPG')
