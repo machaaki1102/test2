@@ -15,7 +15,7 @@ if chage == "緯度経度":
 if chage == "米カウント":
   st.session_state.hoge = 2
   st.experimental_rerun()
-  
+
 #img　に入った画像の経度緯度を取る。
 #parts
 def chape(img):
@@ -37,7 +37,7 @@ def chape(img):
   return lat,lon
 
 #body
-if st.session_state == 1:
+if st.session_state.hoge == 1:
   st.title('画像から緯度・経度取得')
   #img = Image.open('IMG_1010.JPG')
   img = st.file_uploader('写真アップロード',type='jpg')
