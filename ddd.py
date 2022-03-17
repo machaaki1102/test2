@@ -6,6 +6,7 @@ import PIL.ExifTags as ExifTags
 import plotly.express as px
 import os
 
+st.write(1)
 if 'hoge' not in st.session_state:
   st.session_state.hoge = 1
 #ステージ入れ替え
