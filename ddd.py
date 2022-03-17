@@ -41,7 +41,6 @@ if chage == "米カウント":
   st.session_state.page = 2
   st.experimental_rerun()
 
-
 if st.session_state.page == 1:
   st.title('画像から緯度・経度取得')
   #img = Image.open('IMG_1010.JPG')
