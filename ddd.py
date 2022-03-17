@@ -57,6 +57,8 @@ img = st.camera_input('Take a picure')
 
 #img = Image.open('IMG_5655.JPG')
 #img = io.BytesIO(img)
+bytes_data = img.getvalue()
+st.write(bytes_data)
 img = Image.open(img)
 st.write(img._getexif().items())
 exif = {
@@ -65,7 +67,6 @@ exif = {
    if k in ExifTags.TAGS
 }
 st.write(exif)
-
-
+  
 lat,lon = chape(img)
 st.write(lat,lon)
