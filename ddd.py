@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 import PIL.ExifTags as ExifTags
 import plotly.express as px
-
+import os
 
 #img　に入った画像の経度緯度を取る。ss
 #parts
@@ -56,6 +56,7 @@ img = st.camera_input('Take a picure')
 
 
 #img = Image.open('IMG_5655.JPG')
+img = io.BytesIO(img)
 img = Image.open(img)
 st.write(img._getexif().items())
 exif = {
