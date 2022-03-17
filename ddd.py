@@ -25,7 +25,7 @@ def chape(img):
 #  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
   return lat,lon
-#
+
 
 #body
 st.header('画像から緯度・経度取得')
