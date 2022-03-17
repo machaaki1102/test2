@@ -85,7 +85,7 @@ def main():
         # 画像を保存する
         with open(img_path, 'wb') as f:
             f.write(file.read())
-            
+            st.write(img_path)
         # 保存した画像を表示
         img = Image.open(img_path)
         st.image(img)
