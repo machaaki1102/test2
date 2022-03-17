@@ -35,7 +35,7 @@ img = st.file_uploader('写真アップロード',type='jpg')
 if img is not None:
   img = Image.open(img)
   lat,lon = chape(img)
-  st.write(f'経度:{ '{:.4f}'.format(lat)}緯度:{'{:.4f}'.format(lon)}')
+  st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
 
 #マップングする。
   df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
