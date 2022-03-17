@@ -38,7 +38,9 @@ def chape(img):
 #  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
   return lat,lon
+
 st.write(st.session_state.hoge)
+
 #body
 if st.session_state.hoge == 1:
   st.title('画像から緯度・経度取得')
