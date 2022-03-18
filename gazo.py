@@ -28,11 +28,12 @@ def chape(img):
 
 
 #body
+st.write(os.getcwe())
 st.header('画像から緯度・経度取得')
 #st.write('※exif情報(位置情報がないものはエラーになります。')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。',type='jpg')
-
+url = "https://github.com/machaaki1102/test2/blob/main/"
 
 if img: 
   IMG_PATH = "/app/test2/"
