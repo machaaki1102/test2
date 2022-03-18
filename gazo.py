@@ -33,6 +33,8 @@ st.header('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。',type='jpg')
 st.write(img.name)
+st.write(img.getbuffer())
+    
 #img = st.camera_input('Take a picure')
 if img is not None:
   img = Image.open(img)
