@@ -5,7 +5,7 @@ import numpy as np
 import PIL.ExifTags as ExifTags
 import plotly.express as px
 import os
-
+import urllib.request
 #img　に入った画像の経度緯度を取る。
 #parts
 def chape(img):
@@ -34,13 +34,15 @@ st.header('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。',type='jpg')
 url = "https://github.com/machaaki1102/test2/blob/main/"
+#save_name = img.name
+if img:
+  save_name = img.name
+  urllib.request.urlretrieve(url,save_name)
+#  IMG_PATH = "/app/test2/"
+#  img_path2 = os.path.join(IMG_PATH, img.name)
 
-if img: 
-  IMG_PATH = "/app/test2/"
-  img_path2 = os.path.join(IMG_PATH, img.name)
-
-  with open(img_path2, 'wb') as f:
-    f.write(img.getbuffer())
+#  with open(img_path2, 'wb') as f:
+#    f.write(img.getbuffer())
     
 #img = st.camera_input('Take a picure')
 if img is not None:
