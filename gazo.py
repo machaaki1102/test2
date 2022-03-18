@@ -61,7 +61,7 @@ if img is not None:
 if img: 
   with open(file.name, 'wb') as f:
     f.write(file.getbuffer())
-    st.write('ok')
+
 #IMG_PATH = "/app/test2/"
 #def main():
 #    st.markdown('# 画像を保存するデモ')
