@@ -59,7 +59,8 @@ if img:
   csv = df9.to_csv()
 #.encode('utf-8')
   st.download_button('緯度経度情報をダウンロード',
-  data = csv
+  data = csv,
+  file_name = 'lat_lon'
   )
 
 #st.write(os.getcwd())
