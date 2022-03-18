@@ -54,7 +54,8 @@ if img is not None:
   fig9
 
 
-st.write(os.getcwd())
+#st.write(os.getcwd())
+st.write(img.name)
 #画像の保存,挑戦中
 #MG_PATH2 = 'https://github.com/machaaki1102/test2'
 #file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
