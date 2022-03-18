@@ -60,7 +60,7 @@ if img:
 #.encode('utf-8')
   st.download_button('緯度経度情報をダウンロード',
   data = csv,
-  file_name = 'lat_lon'
+  file_name = 'lat_lon.csv'
   )
 
 #st.write(os.getcwd())
