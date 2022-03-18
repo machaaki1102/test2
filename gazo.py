@@ -33,18 +33,8 @@ st.header('画像から緯度・経度取得')
 #st.write('※exif情報(位置情報がないものはエラーになります。')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。',type='jpg')
-url = "https://github.com/machaaki1102/test2/blob/main/"
-#save_name = img.name
-if img:
-  save_name = img.name
-  urllib.request.urlretrieve(url,save_name)
-#  IMG_PATH = "/app/test2/"
-#  img_path2 = os.path.join(IMG_PATH, img.name)
+  #img = st.camera_input('Take a picure')
 
-#  with open(img_path2, 'wb') as f:
-#    f.write(img.getbuffer())
-    
-#img = st.camera_input('Take a picure')
 if img is not None:
   img = Image.open(img)
   lat,lon = chape(img)
@@ -65,6 +55,9 @@ if img is not None:
   fig9 = fig9.update_layout(mapbox_style='open-street-map')
   fig9
 
+st.download_button('ダウンロード',
+data = df9
+)
 
 #st.write(os.getcwd())
 #st.write(img.name)
