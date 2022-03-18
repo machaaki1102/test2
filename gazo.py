@@ -28,12 +28,12 @@ def chape(img):
 
 
 #body
-st.write(os.getcwd())
+#st.write(os.getcwd())
 st.header('画像から緯度・経度取得')
 #st.write('※exif情報(位置情報がないものはエラーになります。')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。',type='jpg')
-  #img = st.camera_input('Take a picure')
+#img = st.camera_input('Take a picure')
 
 if img is not None:
   img = Image.open(img)
@@ -56,7 +56,8 @@ if img is not None:
   fig9
 
 if img:
-  csv = df9.to_csv().encode('utf-8')
+  csv = df9.to_csv()
+#.encode('utf-8')
   st.download_button('緯度経度情報をダウンロード',
   data = csv
   )
