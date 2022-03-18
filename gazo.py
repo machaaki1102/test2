@@ -57,7 +57,7 @@ if img is not None:
 
 if img:
   csv = df9.to_csv().encode('utf-8')
-  st.download_button('ダウンロード',
+  st.download_button('緯度経度情報をダウンロード',
   data = csv
   )
 
