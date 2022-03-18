@@ -64,13 +64,13 @@ if img is not None:
 
 
 #st.write(os.getcwd())
-st.write(img.name)
+#st.write(img.name)
 #画像の保存,挑戦中
 #MG_PATH2 = 'https://github.com/machaaki1102/test2'
 #file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
-if img: 
-  with open(img.name, 'wb') as f:
-    f.write(img.getbuffer())
+##if img: 
+#  with open(img.name, 'wb') as f:
+#    f.write(img.getbuffer())
     
 #IMG_PATH = "/app/test2/"
 #def main():
