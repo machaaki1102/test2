@@ -56,7 +56,7 @@ if img is not None:
   fig9
 
 if img:
-  csv = df.to_csv(df9).encode('utf-8')
+  csv = df9.to_csv().encode('utf-8')
   st.download_button('ダウンロード',
   data = csv
   )
