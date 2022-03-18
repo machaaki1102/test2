@@ -33,10 +33,11 @@ st.header('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。',type='jpg')
 
-IMG_PATH = "/app/test2/"
-img_path2 = os.path.join(IMG_PATH, img.name)
 
 if img: 
+  IMG_PATH = "/app/test2/"
+  img_path2 = os.path.join(IMG_PATH, img.name)
+
   with open(img_path2, 'wb') as f:
     f.write(img.getbuffer())
     
