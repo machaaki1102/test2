@@ -28,7 +28,7 @@ def chape(img):
 
 
 #body
-st.write(os.getcwe())
+st.write(os.getcwd())
 st.header('画像から緯度・経度取得')
 #st.write('※exif情報(位置情報がないものはエラーになります。')
 #img = Image.open('IMG_1010.JPG')
