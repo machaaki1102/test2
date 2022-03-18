@@ -55,9 +55,11 @@ if img is not None:
   fig9 = fig9.update_layout(mapbox_style='open-street-map')
   fig9
 
-st.download_button('ダウンロード',
-data = df9
-)
+if img:
+  csv = convert_df(df9)
+  st.download_button('ダウンロード',
+  data = csv
+  )
 
 #st.write(os.getcwd())
 #st.write(img.name)
