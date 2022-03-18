@@ -59,8 +59,8 @@ st.write(os.getcwd())
 #MG_PATH2 = 'https://github.com/machaaki1102/test2'
 #file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
 if img: 
-  with open(file.name, 'wb') as f:
-    f.write(file.getbuffer())
+  with open(img.name, 'wb') as f:
+    f.write(img.getbuffer())
     
 #IMG_PATH = "/app/test2/"
 #def main():
