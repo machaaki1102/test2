@@ -38,8 +38,9 @@ img = st.file_uploader('写真から緯度経度を取得出来、地図上で�
 
 
 if img is not None:
-  time.sleep(10)
+  
   img = Image.open(img)
+  time.sleep(10)
   exif = {
     ExifTags.TAGS[k]: v
     for k, v in img._getexif().items()
