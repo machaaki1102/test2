@@ -15,3 +15,5 @@ cur.execute('''CREATE TABLE stocks
 
 #Insert a row of data
 cur.excute("INSERT INTO stocks VALUES('2006-01-05','BUY','RHAT','100.35.14')")
+con.commit()
+con.close()
