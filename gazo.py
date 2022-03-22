@@ -45,6 +45,14 @@ st.write(exif)
 
 if img is not None:
   img = Image.open(img)
+  exif = {
+    ExifTags.TAGS[k]: v
+    for k, v in img._getexif().items()
+    if k in ExifTags.TAGS
+  }
+  st.write(exif)
+
+ 
   lat,lon = chape(img)
   st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
 
