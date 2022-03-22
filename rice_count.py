@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 #1なら出来る
 src = 'out_sample2.jpg'
 #src = '/content/drive/MyDrive/Colab Notebooks/making/rice_conunt/mugi.jpg'
-
+#
 img = cv2.imread(src)
 
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
