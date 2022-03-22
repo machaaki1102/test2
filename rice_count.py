@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 #from google.colab.patches import cv2_imshow
-
+#
 #1なら出来る
 src = 'out_sample2.jpg'
 #src = '/content/drive/MyDrive/Colab Notebooks/making/rice_conunt/mugi.jpg'
