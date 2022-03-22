@@ -6,6 +6,7 @@ import PIL.ExifTags as ExifTags
 import plotly.express as px
 import os
 import urllib.request
+import time
 #img　に入った画像の経度緯度を取る。
 #parts
 def chape(img):
@@ -37,6 +38,7 @@ img = st.file_uploader('写真から緯度経度を取得出来、地図上で�
 
 
 if img is not None:
+  time.sleep(10)
   img = Image.open(img)
   exif = {
     ExifTags.TAGS[k]: v
