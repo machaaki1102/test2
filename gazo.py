@@ -16,7 +16,7 @@ def chape(img): #imgは、JPEGそのまま入れた。
     if k in ExifTags.TAGS
   }
   st.write(exif)
-  date = exif["DateTimeOriginal"]
+  a = exif["DateTimeOriginal"]
 # GPS情報を得る --- (*2)
   gps_tags = exif["GPSInfo"]
   gps = {
@@ -42,7 +42,7 @@ if img is not None:
   img  = Image.open(img)
   lat,lon = chape(img)
   st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
-  st.write(date)
+  st.write(a)
 
 #マップングする。
   df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
