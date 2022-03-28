@@ -46,7 +46,7 @@ exif = {
     if k in ExifTags.TAGS
   }
 st.write(exif)
-st.write(exif["DateTimeOriginal"][0])
+st.write(exif["DateTimeOriginal"].value)
 if img is not None:
   #img  = Image.open(img)
   #time.sleep(10)
