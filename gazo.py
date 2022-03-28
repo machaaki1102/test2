@@ -23,6 +23,7 @@ def chape(img): #imgは、JPEGそのまま入れた。
   }
   lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/60)+float(gps["GPSLatitude"][2]/3600)
   lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/60)+float(gps["GPSLongitude"][2]/3600)
+  date = gps["DatetimeOriginal"][0]
 #  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
   return lat,lon
@@ -49,7 +50,7 @@ if img is not None:
   #img  = Image.open(img)
   #time.sleep(10)
   lat,lon = chape(img)
-  st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
+  st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}日付:{date}')
 
 #マップングする。
   df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
