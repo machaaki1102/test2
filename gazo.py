@@ -35,13 +35,9 @@ st.header('画像から緯度・経度取得')
 #img = Image.open('IMG_1010.JPG')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。')
 #img = st.camera_input('Take a picure')
-#img = Image.open(img)
-#exif = {
-#    ExifTags.TAGS[k]: v
-#    for k, v in img._getexif().items()
-#    if k in ExifTags.TAGS
-#  }
-time.sleep(3)
+st.write(type(img))
+img  = Image.open(img)
+st.write(type(img))
 #ddssst.write(exif)
 if img is not None:
   img  = Image.open(img)
