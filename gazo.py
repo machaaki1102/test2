@@ -38,6 +38,7 @@ img = st.file_uploader('写真から緯度経度を取得出来、地図上で�
 
 
 if img is not None:
+  img  = Image.open(img)
   #time.sleep(10)
   lat,lon = chape(img)
   st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
