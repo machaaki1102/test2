@@ -15,6 +15,7 @@ def chape(img): #imgは、JPEGそのまま入れた。
     for k, v in img._getexif().items()
     if k in ExifTags.TAGS
   }
+  st.write(exif)
   date = exif["DateTimeOriginal"]
 # GPS情報を得る --- (*2)
   gps_tags = exif["GPSInfo"]
