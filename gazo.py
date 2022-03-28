@@ -38,7 +38,12 @@ img = st.file_uploader('写真から緯度経度を取得出来、地図上で�
 st.write(type(img))
 img  = Image.open(img)
 st.write(type(img))
-#ddssst.write(exif)
+exif = {
+    ExifTags.TAGS[k]: v
+    for k, v in img._getexif().items()
+    if k in ExifTags.TAGS
+  }
+st.write(exif)
 if img is not None:
   #img  = Image.open(img)
   #time.sleep(10)
