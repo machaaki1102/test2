@@ -37,20 +37,10 @@ st.header('画像から緯度・経度取得')
 img = st.file_uploader('写真から緯度経度を取得出来、地図上で表します。')
 #img = st.camera_input('Take a picure')
 
-st.write(img.name)
-img  = Image.open(img)
-st.write(type(img))
-exif = {
-    ExifTags.TAGS[k]: v
-    for k, v in img._getexif().items()
-    if k in ExifTags.TAGS
-  }
-st.write(exif)
-date = exif["DateTimeOriginal"]
 if img is not None:
-  #img  = Image.open(img)
-  #time.sleep(10)
+  img  = Image.open(img)
   lat,lon = chape(img)
+  date = exif["DateTimeOriginal"]
   st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
   st.write(date)
 
