@@ -40,7 +40,6 @@ img = st.file_uploader('写真から緯度経度を取得出来、地図上で�
 if img is not None:
   img  = Image.open(img)
   lat,lon = chape(img)
-  date = exif["DateTimeOriginal"]
   st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
   st.write(date)
 
