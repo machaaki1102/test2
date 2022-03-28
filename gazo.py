@@ -46,12 +46,12 @@ exif = {
     if k in ExifTags.TAGS
   }
 st.write(exif)
-st.write(exif["DateTimeOriginal"])
+date = exif["DateTimeOriginal"])
 if img is not None:
   #img  = Image.open(img)
   #time.sleep(10)
   lat,lon = chape(img)
-  st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
+  st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}日付：{date}')
   st.write(date)
 
 #マップングする。
