@@ -45,6 +45,7 @@ exif = {
     for k, v in img._getexif().items()
     if k in ExifTags.TAGS
   }
+st.write(exif)
 st.write(exif["DateTimeOriginal"][0])
 if img is not None:
   #img  = Image.open(img)
