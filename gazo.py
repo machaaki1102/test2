@@ -15,6 +15,7 @@ def chape(img): #imgは、JPEGそのまま入れた。
     for k, v in img._getexif().items()
     if k in ExifTags.TAGS
   }
+  date = exif["DateTimeOriginal"]
 # GPS情報を得る --- (*2)
   gps_tags = exif["GPSInfo"]
   gps = {
@@ -23,7 +24,6 @@ def chape(img): #imgは、JPEGそのまま入れた。
   }
   lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/60)+float(gps["GPSLatitude"][2]/3600)
   lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/60)+float(gps["GPSLongitude"][2]/3600)
-  date = gps["DateTimeOriginal"]
 #  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
   return lat,lon
