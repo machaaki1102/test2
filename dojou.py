@@ -10,7 +10,7 @@ url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoo
 #url2 = 'https://soil-inventory.rad.naro.go.jp/figure.html?lat=34.999418&lng=134.990197&zoom=15'
 browzer.get(url)
 time.sleep(5)
-a = borwzer.find_element_by_class('leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom')
+a = browzer.find_element_by_class('leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom')
 #.click()
 print(a.is_enabled())
 #browzer.quit()
