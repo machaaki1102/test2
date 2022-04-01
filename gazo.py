@@ -27,7 +27,7 @@ def chape(img): #imgは、JPEGそのまま入れた。
   lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/60)+float(gps["GPSLongitude"][2]/3600)
 #  lat = float(gps["GPSLatitude"][0])+float(gps["GPSLatitude"][1]/100)
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
-  return lat,lon,date
+  return lat,lon
 
 #
 #body
