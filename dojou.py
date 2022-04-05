@@ -2,7 +2,6 @@ from selenium import webdriver
 import time 
 import os
 from selenium.webdriver.common.by import By
-import pyautogui
 
 browzer = webdriver.Chrome(executable_path='chromedriver.exe')
 
