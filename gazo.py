@@ -75,9 +75,10 @@ if img:
 
 #土壌インベントリにつなぐ
 def dojou():
-  borwer = webdriver.Chrome(executable_path='chromedriver.exe')
+  #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
   url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
-  borwer.get(url)
+  #borwer.get(url)
+  st.write(url)
 
 st.button('土壌インベントリ',on_click=dojou)
 #st.write(os.getcwd())
