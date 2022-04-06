@@ -7,6 +7,12 @@ import plotly.express as px
 import os
 import urllib.request
 import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+
+
 #img　に入った画像の経度緯度を取る。
 #parts
 def chape(img): #imgは、JPEGそのまま入れた。
@@ -67,6 +73,13 @@ if img:
   file_name = 'lat_lon.csv'
   )
 
+#土壌インベントリにつなぐ
+def dojou():
+  borwer = webdriver.Chrome(executable_path='chromedriver.exe')
+  url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
+  borwer.get(url)
+
+st.button('土壌インベントリ',on_click=dojou)
 #st.write(os.getcwd())
 #st.write(img.name)
 #画像の保存,挑戦中
