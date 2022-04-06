@@ -39,7 +39,7 @@ def dojou():
   #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
   url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
   #borwer.get(url)
-  st.write(土壌インベントリサイトGO)
+  st.write(土壌インベントリサイト)
   st.write(url)
 #body
 #st.write(os.getcwd())
