@@ -39,9 +39,8 @@ def dojou():
   #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
   url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
   #borwer.get(url)
-  st.write(土壌インベントリサイトへ)
+  st.write(土壌インベントリサイトGO)
   st.write(url)
-
 #body
 #st.write(os.getcwd())
 st.header('画像から緯度・経度取得')
