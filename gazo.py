@@ -35,6 +35,12 @@ def chape(img): #imgは、JPEGそのまま入れた。
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
   return lat,lon
 
+def dojou():
+  #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
+  url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
+  #borwer.get(url)
+  st.write(url)
+
 #
 #body
 #st.write(os.getcwd())
@@ -72,15 +78,8 @@ if img:
   data = csv,
   file_name = 'lat_lon.csv'
   )
-
-#土壌インベントリにつなぐ
-def dojou():
-  #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
-  url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
-  #borwer.get(url)
-  st.write(url)
-
-st.button('土壌インベントリ',on_click=dojou)
+  
+  st.button('土壌インベントリ',on_click=dojou)
 #st.write(os.getcwd())
 #st.write(img.name)
 #画像の保存,挑戦中
