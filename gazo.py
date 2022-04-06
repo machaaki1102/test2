@@ -42,7 +42,6 @@ def dojou():
   st.write(土壌インベントリURL)
   st.write(url)
 
-#
 #body
 #st.write(os.getcwd())
 st.header('画像から緯度・経度取得')
@@ -65,7 +64,7 @@ if img is not None:
   lat="lat",
   lon="lon",
   size="lat",
-  size_max=10,
+  size_max=5,
   zoom=10,
   height=500)
   fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
