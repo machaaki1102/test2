@@ -56,7 +56,7 @@ if img is not None:
   st.write(f'経度:{"{:.4f}".format(lat)}緯度:{"{:.4f}".format(lon)}')
   #st.write(date)
 
-#マップングする。
+#マッピング。
   df9 = pd.DataFrame(np.array((lat,lon)).reshape(1,2),columns=['lat','lon'])
   px.set_mapbox_access_token('pk.eyJ1IjoibWFjaGFha2kiLCJhIjoiY2wwamVyanUxMGJ2bTNqcjU4dGZtdWdoZyJ9.Vk57Qp-OPGYFkGdgTB6iYw')
   fig9 = px.scatter_mapbox(
