@@ -53,7 +53,7 @@ if img is not None:
   lon="lon",
   size="lat",
   size_max=10,
-  zoom=8,
+  zoom=12,
   height=500)
   fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
   fig9 = fig9.update_layout(mapbox_style='open-street-map')
