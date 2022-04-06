@@ -77,7 +77,7 @@ if img:
   file_name = 'lat_lon.csv'
   )
   
-  st.button('土壌インベントリ',on_click=dojou)
+  st.button('土壌インベントリ-',on_click=dojou)
 #st.write(os.getcwd())
 #st.write(img.name)
 #画像の保存,挑戦中
