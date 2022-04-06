@@ -23,7 +23,7 @@ def click_by_position(driver, x, y) -> None:
 
 lat = 34.999418
 lon= 134.990197
-url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
+url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=12'
 #url2 = 'https://soil-inventory.rad.naro.go.jp/figure.html?lat=34.999418&lng=134.990197&zoom=15'
 browzer.get(url)
 time.sleep(3)
@@ -31,10 +31,11 @@ time.sleep(3)
 x = 100
 y = 100
 click_by_position(browzer, x, y)
+
 #a = browzer.find_element_by_id("map").click()
 #time.sleep(3)
 
-pyautogui.click(200,200)
+#pyautogui.click(200,600)
 #print(a.is_enabled())
 #browzer.quit()
 
