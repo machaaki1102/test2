@@ -39,7 +39,7 @@ def dojou():
   #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
   url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
   #borwer.get(url)
-  st.write(土壌インベントリURL)
+  st.write('土壌インベントリURL')
   st.write(url)
 
 #body
@@ -64,7 +64,7 @@ if img is not None:
   lat="lat",
   lon="lon",
   size="lat",
-  size_max=5,
+  size_max=10,
   zoom=10,
   height=500)
   fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
