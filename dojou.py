@@ -14,6 +14,7 @@ def click_by_position(driver, x, y) -> None:
     actions.move_to_element_with_offset(whole_page, 0, 0)
 
     # MOVE TO DESIRED POSITION THEN CLICK
+    
     actions.move_by_offset(x, y)
     actions.click()
 
@@ -33,6 +34,8 @@ driver.execute_script("window.scrollTo(0, 200)")
 x = 5
 y = 85
 click_by_position(driver, x, y)
+
+#JAVAを使って移動をする。
 #driver.execute_script("window.scrollTo(0, (document.getElementById('map').scrolltop))")
 
 time.sleep(2)
@@ -43,38 +46,7 @@ print(popExplain.text)
 
 #driver.execute_script('windows.scrollTO(0,200);')
 # ある要素までスクロールする
-#element = driver.find_element_by_id("map")
-#element = driver.find_element_by_id("map")
-#actions = ActionChains(driver)
-#actions.move_to_element(element)
-#actions.perform()
 
 #print(whole_page.location)
 #print(driver.get_window_size())
 #print(element.is_enabled())
-
-#actions.move_to_element(element)
-#actions.perform()
-
-
-#click_by_position(borwer, x, y)
-
-
-#a = browzer.find_element_by_id("map").click()
-#time.sleep(3)
-
-#pyautogui.click(200,600)
-#browzer.quit()
-
-
-
-
-#actions = ActionChains(borwer)
-
-    # MOVE TO TOP_LEFT (`move_to_element` will guide you to the CENTER of the element)
-#whole_page = driver.find_element_by_id("buttonLeftBox")
-#whole_page = driver.find_element(by=By.ID, value='map')
-#whole_page = driver.find_element(map")
-#actions.move_to_element_with_offset(whole_page, 0, 0)
-#actions.move_to_element(whole_page)
-#actions.perform()
