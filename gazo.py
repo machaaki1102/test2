@@ -48,7 +48,6 @@ def click_by_position(driver, x, y) -> None:
     actions.click()
 
     actions.perform()
-    print(whole_page.location)
 
 def dojou():
   #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
