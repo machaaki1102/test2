@@ -109,7 +109,7 @@ if img:
   )
   
   st.button('URL土壌インベントリ―',on_click=dojou)
-  st.button('土壌インベントリ(土性）',on_click=dsei)
+#  st.button('土壌インベントリ(土性）',on_click=dsei)
 
 #st.write(os.getcwd())
 #st.write(img.name)
