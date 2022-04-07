@@ -24,7 +24,7 @@ def click_by_position(driver, x, y) -> None:
 lat = 34.999418
 lon= 134.990197
 url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
-#url2 = 'https://soil-inventory.rad.naro.go.jp/figure.html?lat=34.999418&lng=134.990197&zoom=15'
+
 driver.get(url)
 time.sleep(2)
 
@@ -33,7 +33,6 @@ driver.execute_script("window.scrollTo(0, 200)")
 x = 5
 y = 85
 click_by_position(driver, x, y)
-#a = borwer.find_element_by_class_name('leaflet-pane leaflet-marker-pane')
 #driver.execute_script("window.scrollTo(0, (document.getElementById('map').scrolltop))")
 
 time.sleep(2)

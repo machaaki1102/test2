@@ -14,6 +14,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 #img　に入った画像の経度緯度を取る。
+
 #parts
 def chape(img): #imgは、JPEGそのまま入れた。
   exif = {
@@ -35,11 +36,42 @@ def chape(img): #imgは、JPEGそのまま入れた。
 #  lon = float(gps["GPSLongitude"][0])+float(gps["GPSLongitude"][1]/100)
   return lat,lon
 
+def click_by_position(driver, x, y) -> None:
+    actions = ActionChains(driver)
+
+    # MOVE TO TOP_LEFT (`move_to_element` will guide you to the CENTER of the element)
+    whole_page = driver.find_element_by_id("map")
+    actions.move_to_element_with_offset(whole_page, 0, 0)
+
+    # MOVE TO DESIRED POSITION THEN CLICK
+    actions.move_by_offset(x, y)
+    actions.click()
+
+    actions.perform()
+    print(whole_page.location)
+
 def dojou():
   #borwer = webdriver.Chrome(executable_path='chromedriver.exe')
   url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
   #borwer.get(url)
   st.write('site go:' + url)
+
+def dsei():
+  driver = webdriver.Chrome(executable_path='chromedriver.exe')
+  url =f'https://soil-inventory.rad.naro.go.jp/figure.html?lat={lat}&lng={lon}&zoom=15'
+  driver.get(url)
+  time.sleep(2)
+  driver.execute_script("window.scrollTo(0, 200)")  
+  x = 5
+  y = 85
+  click_by_position(driver, x, y)
+  time.sleep(2)
+  popname = driver.find_element_by_id('popName')
+  popExplain = driver.find_element_by_id('popExplain')
+  st.write(
+  popname.text,
+  popExplain.text)
+
 #body
 #st.write(os.getcwd())
 st.header('画像から緯度・経度取得')
@@ -77,7 +109,9 @@ if img:
   file_name = 'lat_lon.csv'
   )
   
-  st.button('土壌インベントリ-',on_click=dojou)
+  st.button('URL土壌インベントリ―',on_click=dojou)
+  st.button('土壌インベントリ(土性）',on_click=dsei)
+
 #st.write(os.getcwd())
 #st.write(img.name)
 #画像の保存,挑戦中
