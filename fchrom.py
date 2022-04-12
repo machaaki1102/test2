@@ -13,9 +13,11 @@ number_P = st.sidebar.slider('P',0,60)
 puls_number_P = st.sidebar.number_input('p_adjustment')
 number_K = st.sidebar.slider('K',0,60)
 puls_number_K = st.sidebar.number_input('K_adjustment')
+n_amount = number_N + puls_number_N
 
 #home
+df  = df.query('N == n_amount')
+
 long = len(df.index)
 st.write(f'ヒット件数:{long}')
 st.dataframe(df)
-
