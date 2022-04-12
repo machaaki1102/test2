@@ -95,7 +95,7 @@ if img is not None:
   size="lat",
   size_max=10,
   zoom=10,
-  height=400,
+  height=300,
   width=360
   )
   fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
