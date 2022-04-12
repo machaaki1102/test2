@@ -18,7 +18,7 @@ n_amount_min = number_N - puls_number_N
 
 #home
 st.write(n_amount_max)
-df  = df.query('N < "n_amount_max" ')
+df  = df.query('N < @n_amount_max')
 
 #df  = df.query('"n_amount_min" <= N <= "n_amount_max"')
 #df = df[df['N'] == "n_amount"]
