@@ -11,6 +11,6 @@ number_K = st.sidebar.slider('K',0,60)
 
 long = len(df.index)
 st.write(f'件数；{long}')
-st.data_frame(df)
+st.dataframe(df)
 
 #st.number_input('Nの調整',0)
