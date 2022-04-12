@@ -93,7 +93,7 @@ if img is not None:
   lat="lat",
   lon="lon",
   size="lat",
-  size_max=10,
+  size_max=7,
   zoom=10,
   height=300,
   width=360
