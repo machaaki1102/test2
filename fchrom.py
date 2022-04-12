@@ -11,9 +11,8 @@ number_P = st.sidebar.slider('P',0,60)
 puls_number_P = st.sidebar.number_input('p_adjustment')
 number_K = st.sidebar.slider('K',0,60)
 puls_number_K = st.sidebar.number_input('K_adjustment')
-s
+
 long = len(df.index)
 st.write(f'ヒット件数:{long}')
 st.dataframe(df)
 
-#st.number_input('Nの調整',0)
