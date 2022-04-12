@@ -15,8 +15,10 @@ number_K = st.sidebar.slider('K',0,60)
 puls_number_K = st.sidebar.number_input('K_adjustment')
 n_amount_max = number_N + puls_number_N
 n_amount_min = number_N - puls_number_N
+
 #home
-df  = df.query('N = "n_amount_max"')
+st.write(n_amount_max)
+#df  = df.query('N = "n_amount_max"')
 
 #df  = df.query('"n_amount_min" <= N <= "n_amount_max"')
 #df = df[df['N'] == "n_amount"]
