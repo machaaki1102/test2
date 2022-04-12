@@ -96,7 +96,7 @@ if img is not None:
   size_max=10,
   zoom=10,
   height=500,
-  width=300
+  width=350
   )
   fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
   fig9 = fig9.update_layout(mapbox_style='open-street-map')
