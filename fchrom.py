@@ -44,7 +44,7 @@ k_amount_min = number_K - puls_number_K
 with st.sidebar:
     selected_sei = st.checkbox('化成肥料を除外する')
     selected_you = st.checkbox('輸入品を除外する')
-    selected_gen = st.checkbox('原料を除外する')
+    selected_gen = st.checkbox('有機原料を除外する')
 
 if selected_sei:
     df = df[~df['登録番号'].str.contains('生')]
