@@ -10,7 +10,9 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 col1, col2,col3 = st.columns(3)
 with col1:
     selected_N = st.sidebar.checkbox('N')
+with col2:
     selected_P = st.sidebar.checkbox('P')
+with col3:
     selected_K = st.sidebar.checkbox('K')
 
 number_N = st.sidebar.slider('N',0,60)
