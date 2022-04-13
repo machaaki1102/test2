@@ -45,7 +45,7 @@ k_amount_min = number_K - puls_number_K
 st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
 
 
-if selected_P:
+if selected_N:
     df  = df.query('@n_amount_min <= N <= @n_amount_max')
 if selected_P:
     df  = df.query('@p_amount_min <= P <= @p_amount_max')
