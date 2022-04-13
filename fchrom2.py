@@ -52,6 +52,8 @@ if selected_gen:
     df = df[~df['登録番号'].str.startswith('第')]
 
 #home
+st.title('検索システム　vol.1')
+
 st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
 
 if selected_N:
