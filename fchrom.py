@@ -46,10 +46,10 @@ with st.sidebar:
     selected_you = st.checkbox('輸入品を除外する')
     selected_gen = st.checkbox('原料を除外する')
 
-if not selected_sei:
-    df = df[df['登録番号'].str.contains('生')]
-if not selected_you:
-    df = df[df['登録番号'].str.contains('輸')]
+#if selected_sei:
+#    df = df[df['登録番号'].str.contains('生'|'輸')]
+#if selected_you:
+#    df = df[df['登録番号'].str.contains('輸')]
 
 #home
 st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
