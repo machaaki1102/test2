@@ -43,9 +43,9 @@ k_amount_min = number_K - puls_number_K
 
 #home
 st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
-selected_N 
-selected_P
-selected_K
+#selected_N 
+#selected_P
+#selected_K
 
 
 
