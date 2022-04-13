@@ -7,14 +7,24 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 #body
 
 #sidebar
+#with st.sidebar:
+#    col1,col2,col3 = st.sidebar.columns(3)
+#    with col1:
+##        selected_N = st.sidebar.checkbox('N')
+ #   with col2:
+ #       selected_P = st.sidebar.checkbox('P')
+ #   with col3:
+ #       selected_K = st.sidebar.checkbox('K')
+
 with st.sidebar:
-    col1, col2,col3 = st.sidebar.columns(3)
+    col1, col2,col3 = st.columns(3)
     with col1:
-        selected_N = st.sidebar.checkbox('N')
+        selected_N = st.checkbox('N')
     with col2:
-        selected_P = st.sidebar.checkbox('P')
+        selected_P = st.checkbox('P')
     with col3:
-        selected_K = st.sidebar.checkbox('K')
+        selected_K = st.checkbox('K')
+
 
 
 
