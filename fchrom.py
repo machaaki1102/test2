@@ -7,9 +7,11 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 #body
 
 #sidebar
-selected_N = st.sidebar.checkbox('N')
-selected_P = st.sidebar.checkbox('P')
-selected_K = st.sidebar.checkbox('K')
+col1, col2,col3 = st.cloumns(3)
+with col1:
+    selected_N = st.sidebar.checkbox('N')
+    selected_P = st.sidebar.checkbox('P')
+    selected_K = st.sidebar.checkbox('K')
 
 number_N = st.sidebar.slider('N',0,60)
 #puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
