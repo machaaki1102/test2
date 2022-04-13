@@ -5,7 +5,6 @@ import pandas as pd
 df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
 #body
-
 #sidebar
 st.sidebar.write('select')
 
