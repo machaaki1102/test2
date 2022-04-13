@@ -52,7 +52,7 @@ if selected_sei:
 if selected_you:
     df = df[~df['登録番号'].str.contains('輸')]
 if selected_gen:
-    df =df[~df['登録番号'].startswith('原')]
+    df =df[~df['登録番号'].startswith('第')]
 
 #home
 st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
