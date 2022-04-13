@@ -46,7 +46,7 @@ with st.sidebar:
     selected_you = st.checkbox('輸入品を除外する')
     selected_gen = st.checkbox('原料を除外する')
 
-df[df['登録番号'].startswith('原')]
+
 if selected_sei:
     df = df[~df['登録番号'].str.contains('生')]
 if selected_you:
