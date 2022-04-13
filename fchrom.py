@@ -68,3 +68,5 @@ st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名�
 list_s = []
 list_s = df["肥料業者"].unique()
 choices = st.multiselect('業者セレクト',list_s)
+if choices:
+    df = df.query('業者セレクト == @choices')
