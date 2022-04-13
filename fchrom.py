@@ -69,4 +69,4 @@ list_s = []
 list_s = df["肥料業者"].unique()
 choices = st.multiselect('業者セレクト',list_s)
 if choices:
-    df = df.query('業者セレクト == @choices')
+    df = df.query('肥料業者 == @choices')
