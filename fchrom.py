@@ -40,6 +40,16 @@ p_amount_min = number_P - puls_number_P
 k_amount_max = number_K + puls_number_K
 k_amount_min = number_K - puls_number_K
 
+#化成＝生、輸入＝輸、なし＝原料
+with st.sidebar:
+    selected_sei = st.checkbox('化成肥料を除外する')
+    selected_you = st.checkbox('輸入品を除外する')
+    selected_gen = st.checkbox('原料を除外する')
+
+if not selected_sei:
+    df = df[df['登録番号'].str.contains('生')]
+if not selected_you:
+    df = df[df['登録番号'].str.contains('輸')]
 
 #home
 st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
