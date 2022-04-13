@@ -7,7 +7,7 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 #body
 
 #sidebar
-with st.sider:
+with st.sidebar:
     col1, col2,col3 = st.sidebar.columns(3)
     with col1:
         selected_N = st.sidebar.checkbox('N')
