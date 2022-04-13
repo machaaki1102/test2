@@ -61,10 +61,10 @@ if selected_P:
 if selected_K:
     df  = df.query('@k_amount_min <= K <= @k_amount_max')
 
-long = len(df.index)
-st.write(f'ヒット件数:{long}')
-st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
-
 list_s = []
 list_s = df["肥料業者"].unique()
 choices = st.multiselect('業者セレクト',list_s)
+
+long = len(df.index)
+st.write(f'ヒット件数:{long}')
+st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
