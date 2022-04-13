@@ -10,6 +10,7 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 with st.sidebar:
     col1, col2,col3 = st.columns(3)
     with col1:
+        st.write('select f')
         selected_N = st.checkbox('N')
     with col2:
         selected_P = st.checkbox('P')
