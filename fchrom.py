@@ -14,7 +14,9 @@ puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
 number_K = st.sidebar.slider('K',0,60)
 puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
 
-st.write(type(puls_number_K))
+puls_number_N = int(puls_number_N)
+puls_number_P = int(puls_number_P)
+puls_number_K = int(puls_number_K)
 
 n_amount_max = number_N + puls_number_N
 n_amount_min = number_N - puls_number_N
