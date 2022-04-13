@@ -25,7 +25,7 @@ k_amount_min = number_K - puls_number_K
 
 
 #home
-st.write(f'N:{number_N}P:{number_P}K:{number_K}')
+st.write(f'N:{number_N}±{puls_number_N} P:{number_P}±{puls_number_N}±{puls_number_P}K:{number_K}±{puls_number_Ks}')
 df  = df.query('@n_amount_min <= N <= @n_amount_max')
 df  = df.query('@p_amount_min <= P <= @p_amount_max')
 df  = df.query('@k_amount_min <= K <= @k_amount_max')
