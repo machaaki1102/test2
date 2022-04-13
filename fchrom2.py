@@ -40,7 +40,7 @@ k_amount_min = number_K - puls_number_K
 
 #化成＝生、輸入＝輸、なし＝原料
 with st.sidebar:
-    selected_sei = st.checkbox('化成肥料を除外する')
+    selected_sei = st.checkbox('製造肥料を除外する')
     selected_you = st.checkbox('輸入品を除外する')
     selected_gen = st.checkbox('有機原料を除外する')
 
