@@ -47,7 +47,7 @@ with st.sidebar:
 if selected_sei:
     df = df[~df['登録番号'].str.contains('生')]
 if selected_you:
-    df = df[~df['登録番号'].str.contains('輸')]
+    df = df[~df['登録番号'].str.contains('輸|外')]
 if selected_gen:
     df = df[~df['登録番号'].str.startswith('第')]
 
