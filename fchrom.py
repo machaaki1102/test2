@@ -7,15 +7,6 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 #body
 
 #sidebar
-#with st.sidebar:
-#    col1,col2,col3 = st.sidebar.columns(3)
-#    with col1:
-##        selected_N = st.sidebar.checkbox('N')
- #   with col2:
- #       selected_P = st.sidebar.checkbox('P')
- #   with col3:
- #       selected_K = st.sidebar.checkbox('K')
-
 with st.sidebar:
     col1, col2,col3 = st.columns(3)
     with col1:
@@ -24,10 +15,6 @@ with st.sidebar:
         selected_P = st.checkbox('P')
     with col3:
         selected_K = st.checkbox('K')
-
-
-
-
 
 number_N = st.sidebar.slider('N',0,60)
 #puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
@@ -56,11 +43,17 @@ k_amount_min = number_K - puls_number_K
 
 #home
 st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
+selected_N 
+selected_P
+selected_K
+
+
+
 df  = df.query('@n_amount_min <= N <= @n_amount_max')
 df  = df.query('@p_amount_min <= P <= @p_amount_max')
-df  = df.query('@k_amount_min <= K <= @k_amount_max')
-#df  = df.query('"n_amount_min" <= N <= "n_amount_max"')
-#df = df[df['N'] == "n_amount"]
+if selected_K:
+    df  = df.query('@k_amount_min <= K <= @k_amount_max')
+
 long = len(df.index)
 st.write(f'ヒット件数:{long}')
 #st.dataframe(df[["肥料の名称","肥料業者","肥料種類名称","N","P","K","登録番号"]])
