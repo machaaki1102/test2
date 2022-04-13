@@ -37,4 +37,5 @@ df  = df.query('@k_amount_min <= K <= @k_amount_max')
 #df = df[df['N'] == "n_amount"]
 long = len(df.index)
 st.write(f'ヒット件数:{long}')
-st.dataframe(df[["肥料の名称","肥料業者","肥料種類名称","N","P","K","登録番号"]])
+#st.dataframe(df[["肥料の名称","肥料業者","肥料種類名称","N","P","K","登録番号"]])
+st.dataframe(df[["肥料の名称","肥料業者","肥料種類名称","N","P","K","登録番号"]],width=800, height=500)
