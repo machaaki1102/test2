@@ -73,7 +73,7 @@ if choices:
 long = len(df.index)
 st.write(f'ヒット件数:{long}')
 st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
-s = st.input()
+s = st.text_input('登録番号')
 #b = st.button('生第10000号')
 if s == '生第10000号':
     col1,col2 = st.columns(2)
