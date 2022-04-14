@@ -5,7 +5,7 @@ from PIL import Image
 #データ
 df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
-#catalog_ushiro = Image.open('./1024.jpg')
+
 st.image('1024.jpg')
 
 #body
@@ -76,3 +76,11 @@ if choices:
 long = len(df.index)
 st.write(f'ヒット件数:{long}')
 st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
+
+b = st.button('生第10000号')
+if b:
+    col1,col2 = st.columns(2)
+    with col1:
+        st.image('1024.jpg')
+    with col2:
+        st.image('1024_2.jpg')
