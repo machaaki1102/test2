@@ -5,8 +5,8 @@ from PIL import Image
 #データ
 df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
-catalog_ushiro = Image.open('./1024.jpg')
-st.image(catalog_urshiro)
+#catalog_ushiro = Image.open('./1024.jpg')
+st.image('1024.jpg')
 
 #body
 #sidebar
