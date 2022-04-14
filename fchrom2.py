@@ -75,7 +75,7 @@ st.write(f'ヒット件数:{long}')
 st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
 
 list_c = df['登録番号'].unique()
-s = st.multiselect('登録番号よりチラシ',list_s)
+s = st.multiselect('登録番号よりチラシ',list_c)
 #s = st.text_input('登録番号')
 #b = st.button('生第10000号')
 if s == '生第10000号':
