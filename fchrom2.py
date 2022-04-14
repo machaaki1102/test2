@@ -76,7 +76,7 @@ st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名�
 
 list_c = df['登録番号'].unique()
 s = st.multiselect('登録番号よりチラシ',list_c)
-#s = st.text_input('登録番号')
+st.write(s)#s = st.text_input('登録番号')
 if s == '生第10000号':
     col1,col2 = st.columns(2)
     with col1:
