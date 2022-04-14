@@ -1,8 +1,14 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image    
 
 #データ
 df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
+
+st.image('./千代田/1024.jpg')
+#catalog_ushiro = open('./千代田/1024.jpg','br').read()
+
+
 
 #body
 #sidebar
