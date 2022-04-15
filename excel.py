@@ -15,9 +15,9 @@ if radio == '新規':
     shiken = st.text_input('試験名')
     touroku = st.button('登録')
     if touroku:
-        with open('C¥Users¥ono¥Desktop¥jj.txt','w') as f:
+        with open('C¥Users¥ono¥Desktop¥123.txt','w') as f:
             f.write(tokui)
-            f.close()
+            f.clost()
 
 if radio == '追記':
     st.write('前回の続き')
