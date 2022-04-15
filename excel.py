@@ -12,5 +12,5 @@ if radio == '新規':
     st.text_input('得意先')
     st.text_input('試験名')
 
-if radio == '追加':
+if radio == '追記':
     st.write('前回の続き')
