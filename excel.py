@@ -9,8 +9,8 @@ radio = st.radio('which',select_radio)
 
 #page=0
 if radio == '新規':
-    st.text_input('得意先',key=tokuisaki)
-    st.text_input('試験名',kay=shiken)
+    st.text_input('得意先')
+    st.text_input('試験名')
 
 if radio == '追加':
     st.write('前回の続き')
