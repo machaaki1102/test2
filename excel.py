@@ -9,6 +9,8 @@ radio = st.radio('which',select_radio)
 
 #page=0
 if radio == '新規':
+    ban = 1
+    st.write(f'登録番号:{ban}')
     tokui = st.text_input('得意先')
     shiken = st.text_input('試験名')
     touroku = st.button('登録')
