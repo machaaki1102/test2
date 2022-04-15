@@ -17,7 +17,7 @@ if radio == '新規':
     if touroku:
         with open('C¥Users¥ono¥Desktop¥123.txt','w') as f:
             f.write(tokui)
-            f.clost()
+            f.close()
 
 if radio == '追記':
     st.write('前回の続き')
