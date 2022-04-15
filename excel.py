@@ -1,4 +1,4 @@
-import stramlit as st
+import streamlit as st
 
 
 if 'page' not in st.session_state:
