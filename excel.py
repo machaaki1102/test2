@@ -2,7 +2,15 @@ import stramlit as st
 
 
 if 'page' not in st.session_state:
-    st.session_state.init=0
+    st.session_state.page=0
+
+select_radio = ['新規','追記']
+radio = st.radio('which',select_radio)
 
 #page=0
-st.text_input('得意先',)
+if radio == '新規':
+    st.text_input('得意先',key=tokuisaki)
+    st.text_input('試験名',kay=shiken)
+
+if radio == '追加':
+    st.write('前回の続き')
