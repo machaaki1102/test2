@@ -53,81 +53,87 @@ k_amount_min = number_K - puls_number_K
 #    df = df[~df['登録番号'].str.startswith('第')]
 
 #home
-st.header('検索画面')
-#st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
+if 'page' not in st.session_state:
+    st.session_state.page=0
 
+
+if st.session_state.page == 0 :
+
+    st.header('検索画面')
+#st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
-
 #c_number = len(c_box)
 #col_a,col_b = st.columns(2)
-st.write('<製品カテゴリ>')
+    st.write('<製品カテゴリ>')
 
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他'] 
-col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.columns(9)
-with col1:
-    selected_1 = st.checkbox('化成')
-with col2:
-    selected_2 = st.checkbox('配合')
-with col3:
-    selected_3 = st.checkbox('液肥')
-with col4:
-    selected_4 = st.checkbox('苦土')
-with col5:
-    selected_5 = st.checkbox('燐肥')
-with col6:
-    selected_6 = st.checkbox('粉末')
-with col7:
-    selected_7 = st.checkbox('土改')
-with col8:
-    selected_8 = st.checkbox('BS')
-with col9:
-    selected_9 = st.checkbox('その他')
+    col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.columns(9)
+    with col1:
+        selected_1 = st.checkbox('化成')
+    with col2:
+        selected_2 = st.checkbox('配合')
+    with col3:
+        selected_3 = st.checkbox('液肥')
+    with col4:
+        selected_4 = st.checkbox('苦土')
+    with col5:
+        selected_5 = st.checkbox('燐肥')
+    with col6:
+        selected_6 = st.checkbox('粉末')
+    with col7:
+        selected_7 = st.checkbox('土改')
+    with col8:
+        selected_8 = st.checkbox('BS')
+    with col9:
+        selected_9 = st.checkbox('その他')
 
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
-st.write('<特長>')
+    st.write('<特長>')
 
-col11,col12,col13,col14,col15,col16,col17,col18,col19 = st.columns(9)
-with col11:
-    selected_11 = st.checkbox('Dd')
-with col12:
-    selected_12 = st.checkbox('ASU')
-with col13:
-    selected_13 = st.checkbox('UF')
-with col14:
-    selected_14 = st.checkbox('CDU')
-with col15:
-    selected_15 = st.checkbox('IB')
+    col11,col12,col13,col14,col15,col16,col17,col18,col19 = st.columns(9)
+    with col11:
+        selected_11 = st.checkbox('Dd')
+    with col12:
+        selected_12 = st.checkbox('ASU')
+    with col13:
+        selected_13 = st.checkbox('UF')
+    with col14:
+        selected_14 = st.checkbox('CDU')
+    with col15:
+        selected_15 = st.checkbox('IB')
 
 #col6,col7,col8,col9, = st.columns(4)
-with col16:
-    selected_16 = st.checkbox('CN')
-with col17:
-    selected_17 = st.checkbox('亜ﾘﾝ')
-with col18:
-    selected_18 = st.checkbox('微量')
-with col19:
-    selected_19 = st.checkbox('被覆')
+    with col16:
+        selected_16 = st.checkbox('CN')
+    with col17:
+        selected_17 = st.checkbox('亜ﾘﾝ')
+    with col18:
+        selected_18 = st.checkbox('微量')
+    with col19:
+        selected_19 = st.checkbox('被覆')
 
-col_n,col_p,col_k = st.columns(3)
-with col_n:
-    number_N = st.text_input('N',0,60)
-with col_p:
-    number_P = st.text_input('P',0,60)
-with col_k:
-    number_K = st.text_input('K',0,60)
+    col_n,col_p,col_k = st.columns(3)
+    with col_n:
+        number_N = st.text_input('N',0,60)
+    with col_p:
+        number_P = st.text_input('P',0,60)
+    with col_k:
+        number_K = st.text_input('K',0,60)
 
-jisha = st.checkbox('自社品')
-tasha = st.checkbox('他社品')
-kensaku = st.button('検索')
+    jisha = st.checkbox('自社品')
+    tasha = st.checkbox('他社品')
+    kensaku = st.button('検索')
+        
+    if kensaku:
+        st.session_sate.page = 1
 
-
-if selected_N:
-    df  = df.query('@n_amount_min <= N <= @n_amount_max')
-if selected_P:
-    df  = df.query('@p_amount_min <= P <= @p_amount_max')
-if selected_K:
-    df  = df.query('@k_amount_min <= K <= @k_amount_max')
+#    if selected_N:
+#        df  = df.query('@n_amount_min <= N <= @n_amount_max')
+#    if selected_P:
+#        df  = df.query('@p_amount_min <= P <= @p_amount_max')
+#    if selected_K:
+#        df  = df.query('@k_amount_min <= K <= @k_amount_max')
 
 #list_s = []
 #list_s = df["肥料業者"].unique()
@@ -138,7 +144,7 @@ if selected_K:
 
 #long = len(df.index)
 #st.write(f'ヒット件数:{long}')
-if kensaku:
+if st.session_sate.page == 1:
     col_cc,col_dd = st.columns(2)
     with col_cc:
         if jisha:
