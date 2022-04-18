@@ -127,12 +127,12 @@ if st.session_state.page == 0 :
         
     if kensaku:
         st.session_state.page = 1
-        if ccsha:
-            st.session_state.ccsha = 1
+    #    if ccsha:
+    #       st.session_state.ccsha = 1
 
-    if kensaku:
-        if tasha:
-            st.session_state.tasha = 1
+    #if kensaku:
+    #    if tasha:
+    #        st.session_state.tasha = 1
     
     #st.experimental_rerun()
 #          
