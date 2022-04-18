@@ -7,16 +7,16 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
 #body
 #sidebar
-#st.sidebar.write('select')
+st.sidebar.write('select')
 
-#with st.sidebar:
-#    col1, col2,col3 = st.columns(3)
-#    with col1:
-#        selected_N = st.checkbox('N')
-#    with col2:
-#        selected_P = st.checkbox('P')
-#    with col3:
-#        selected_K = st.checkbox('K')
+with st.sidebar:
+    col1, col2,col3 = st.columns(3)
+    with col1:
+        selected_N = st.checkbox('N')
+    with col2:
+        selected_P = st.checkbox('P')
+    with col3:
+        selected_K = st.checkbox('K')
 
 number_N = st.sidebar.slider('N',0,60)
 number_P = st.sidebar.slider('P',0,60)
@@ -117,16 +117,9 @@ with col_p:
 with col_k:
     number_K = st.text_input('K',0,60)
 
-#puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
-#puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
-#puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
-
 jisha = st.checkbox('自社品')
 tasha = st.checkbox('他社')
 kensaku = st.button('検索')
-#c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
-
-#t_select = st.radio('特長',t_box)
 
 
 if selected_N:
