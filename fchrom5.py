@@ -162,7 +162,8 @@ if st.session_state.page == 1:
     #    st.write('自社品')
         if st.session_state.ccsha == 1:
             st.write('自社品')
-            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
+            df_ji = df.query('肥料業者 == @choices')
+            st.dataframe(df_ji[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
             #st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]].query('肥料業者 == @choices'),width=500, height=500)
             
             modoru = st.button('戻る ')
