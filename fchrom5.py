@@ -176,6 +176,7 @@ if st.session_state.page == 1:
             if modoru:
                 st.session_state.page = 0
                 st.session_state.ccsha = 0
+                st.experimental_rerun() 
     with col_dd:
     #    st.write('他社品')
         if st.session_state.tasha == 1:
@@ -185,6 +186,7 @@ if st.session_state.page == 1:
             if modoru:
                 st.session_state.page = 0
                 st.session_state.tasha = 0
+                st.experimental_rerun() 
 
 #st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
 
