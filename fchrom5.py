@@ -126,21 +126,24 @@ if st.session_state.page == 0 :
 
     ccsha = st.checkbox('自社品')
     tasha = st.checkbox('他社品')
-    kensaku = st.button('検索')
 
- 
-   
-
+def kensakuu():
     if kensaku:
         st.session_state.page = 1
         if ccsha:
             st.session_state.ccsha = 1
 
-    #if kensaku:
         if tasha:
-            st.session_state.tasha = 1
-    
-    #st.experimental_rerun()
+            st.session_state.tasha = 1    
+    st.experimental_rerun()
+
+
+
+    kensaku = st.button('検索',on_click=kensakuu)
+
+ 
+   
+
 #          
 #  st.experimental_rerun()    
 #    if selected_N:
@@ -169,6 +172,7 @@ if st.session_state.page == 1:
             modoru = st.button('戻る ')
             if modoru:
                 st.session_state.page = 0
+                st.session_state.ccsha = 0
     with col_dd:
     #    st.write('他社品')
         if st.session_state.tasha == 1:
@@ -177,6 +181,7 @@ if st.session_state.page == 1:
             modoru = st.button(' 戻る')
             if modoru:
                 st.session_state.page = 0
+                st.session_state.tasha = 0
 
 #st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
 
