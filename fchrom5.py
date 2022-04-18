@@ -124,7 +124,11 @@ if st.session_state.page == 0 :
     ccsha = st.checkbox('自社品')
     tasha = st.checkbox('他社品')
     kensaku = st.button('検索')
-        
+
+    
+    st.session_state.ccsha = 0
+    st.session_state.tasha = 0
+
     if kensaku:
         st.session_state.page = 1
     #    if ccsha:
@@ -164,8 +168,9 @@ if st.session_state.page == 1:
             if modoru:
                 st.session_state.page = 0
     with col_dd:
+        st.write('他社品')
         if st.session_state.tasha == 1:
-            st.write('他社品')
+        #    st.write('他社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
             modoru = st.button(' 戻る')
             if modoru:
