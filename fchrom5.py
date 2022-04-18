@@ -134,7 +134,7 @@ if st.session_state.page == 0 :
         if tasha:
             st.session_state.tasha = 1
     
-    st.experimental_rerun()
+    #st.experimental_rerun()
 #          
 #  st.experimental_rerun()    
 #    if selected_N:
