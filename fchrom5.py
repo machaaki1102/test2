@@ -60,7 +60,7 @@ st.header('検索画面')
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
 
 #c_number = len(c_box)
-col_a,col_b = st.columns(2)
+#col_a,col_b = st.columns(2)
 st.write('製品カテゴリー')
 
 col_a,col_b = st.columns(2)
