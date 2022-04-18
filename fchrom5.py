@@ -62,7 +62,7 @@ st.header('検索画面')
 #c_number = len(c_box)
 
 st.write('製品カテゴリー')
-col1,col2,col3,col4,col5,col6,col7,col8,col9, = st.columns(9)
+col1,col2,col3,col4,col5 = st.columns(5)
 with col1:
     selected_1 = st.checkbox('化成')
 with col2:
@@ -73,6 +73,9 @@ with col4:
     selected_4 = st.checkbox('苦土')
 with col5:
     selected_5 = st.checkbox('燐肥')
+
+col6,col7,col8,col9, = st.columns(4)
+
 with col6:
     selected_6 = st.checkbox('粉末')
 with col7:
