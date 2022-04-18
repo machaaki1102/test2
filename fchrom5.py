@@ -123,6 +123,7 @@ with col_k:
 
 jisha = st.checkbox('自社品')
 tasha = st.checkbox('他社')
+kensaku = st.button('検索')
 #c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
 
 #t_select = st.radio('特長',t_box)
