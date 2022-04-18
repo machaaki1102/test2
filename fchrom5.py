@@ -59,8 +59,8 @@ st.header('検索画面')
 c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
 t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
 
-c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
-t_select = st.checkbox('特長',t_box)
+c_select = st.radio('製品ｶﾃｺﾞﾘｰ',c_box)
+t_select = st.radio('特長',t_box)
 
 
 if selected_N:
@@ -72,7 +72,7 @@ if selected_K:
 
 list_s = []
 list_s = df["肥料業者"].unique()
-choices = st.multiselect('業者セレクト',list_s)
+#choices = st.multiselect('業者セレクト',list_s)
 
 if choices:
     df = df.query('肥料業者 == @choices')
