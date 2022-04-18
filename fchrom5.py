@@ -77,9 +77,6 @@ with col_a:
         selected_4 = st.checkbox('苦土')
     with col5:
         selected_5 = st.checkbox('燐肥')
-
-#col6,col7,col8,col9, = st.columns(4)
-
     with col6:
         selected_6 = st.checkbox('粉末')
     with col7:
@@ -89,10 +86,10 @@ with col_a:
     with col9:
         selected_9 = st.checkbox('その他')
 
-with col_n:
-    col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.columns(9)
-    with col1:
-        selected_1 = st.checkbox('化成')
+with col_b:
+    col11,col12,col13,col14,col15,col16,col17,col18,col19 = st.columns(9)
+    with col11:
+        selected_11 = st.checkbox('化成')
     with col2:
         selected_2 = st.checkbox('配合')
     with col3:
