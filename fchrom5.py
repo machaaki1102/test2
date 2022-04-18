@@ -85,30 +85,41 @@ with col9:
     selected_9 = st.checkbox('その他')
 
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
-with col_b:
-    st.write('<特長>')
+st.write('<特長>')
 
-    col11,col12,col13,col14,col15,col16,col17,col18,col19 = st.columns(9)
-    with col11:
-        selected_11 = st.checkbox('Dd')
-    with col12:
-        selected_12 = st.checkbox('ASU')
-    with col13:
-        selected_13 = st.checkbox('UF')
-    with col14:
-        selected_14 = st.checkbox('CDU')
-    with col15:
-        selected_15 = st.checkbox('IB')
+col11,col12,col13,col14,col15,col16,col17,col18,col19 = st.columns(9)
+with col11:
+    selected_11 = st.checkbox('Dd')
+with col12:
+    selected_12 = st.checkbox('ASU')
+with col13:
+    selected_13 = st.checkbox('UF')
+with col14:
+    selected_14 = st.checkbox('CDU')
+with col15:
+    selected_15 = st.checkbox('IB')
 
 #col6,col7,col8,col9, = st.columns(4)
-    with col16:
-        selected_16 = st.checkbox('CN')
-    with col17:
-        selected_17 = st.checkbox('亜ﾘﾝ')
-    with col18:
-        selected_18 = st.checkbox('微量')
-    with col19:
-        selected_19 = st.checkbox('被覆')
+with col16:
+    selected_16 = st.checkbox('CN')
+with col17:
+    selected_17 = st.checkbox('亜ﾘﾝ')
+with col18:
+    selected_18 = st.checkbox('微量')
+with col19:
+    selected_19 = st.checkbox('被覆')
+
+col_n,col_p,con_k = st.columns(3)
+
+number_N = col_n.st.slider('N',0,60)
+number_P = col_p.st.slider('P',0,60)
+number_K = col.k.st.slider('K',0,60)
+
+puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
+puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
+puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
+
+
 
 #c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
 
