@@ -109,12 +109,14 @@ if st.session_state.page == 0 :
     kensaku = st.button('検索')
 
     if kensaku:
-        st.session_state.page = 1
+    #    st.session_state.page = 1
         if ccsha:
             st.session_state.ccsha = 1
+            st.session_state.page = 1
 
         if tasha:
-            st.session_state.tasha = 1    
+            st.session_state.tasha = 1
+            st.session_state.page = 1    
 
 
 choices = ['日東エフシー株式会社']
