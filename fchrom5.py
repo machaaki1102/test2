@@ -143,12 +143,12 @@ if kensaku:
     with col_cc:
         if jisha:
             st.write('自社品')
-            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=200, height=200)
+            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
 
     with col_dd:
         if jisha:
             st.write('他社品')
-            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=200, height=200)
+            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
 
 
 #st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
