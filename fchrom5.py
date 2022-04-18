@@ -20,7 +20,6 @@ if st.session_state.page == 0 :
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
     st.write('<製品カテゴリ>')
 
-#c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他'] 
     col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.columns(9)
     with col1:
         selected_1 = st.checkbox('化成')
@@ -41,7 +40,6 @@ if st.session_state.page == 0 :
     with col9:
         selected_9 = st.checkbox('その他')
 
-#t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
     st.write('<特長>')
 
     col11,col12,col13,col14,col15,col16,col17,col18,col19 = st.columns(9)
@@ -96,27 +94,22 @@ if st.session_state.page == 0 :
     df  = df.query('@n_amount_min <= N <= @n_amount_max')
     df  = df.query('@p_amount_min <= P <= @p_amount_max')
     df  = df.query('@k_amount_min <= K <= @k_amount_max')
-
-#        df  = df.query('@n_amount_min <= N <= @n_amount_max')
-#    if selected_P:
-#        df  = df.query('@p_amount_min <= P <= @p_amount_max')
-#    if selected_K:
-#        df  = df.query('@k_amount_min <= K <= @k_amount_max')
-
     
     ccsha = st.checkbox('自社品')
     tasha = st.checkbox('他社品')
     kensaku = st.button('検索')
 
     if kensaku:
-    #    st.session_state.page = 1
+        st.session_state.page = 1
         if ccsha:
             st.session_state.ccsha = 1
-            st.session_state.page = 1
 
         if tasha:
             st.session_state.tasha = 1
-            st.session_state.page = 1    
+        
+        st.experimental_rerun() 
+
+
 
 
 choices = ['日東エフシー株式会社']
