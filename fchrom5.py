@@ -64,7 +64,7 @@ st.header('検索画面')
 st.write('<製品カテゴリー>')
 
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他'] 
-col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.beta_columns(9)
+col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.columns([3,2])
 with col1:
     selected_1 = st.checkbox('化成')
 with col2:
