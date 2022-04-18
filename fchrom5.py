@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image    
 
 #データ
-df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
+#df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
 #body
 
@@ -12,6 +12,7 @@ if 'page' not in st.session_state:
     st.session_state.page=0
 
 if st.session_state.page == 0 :
+    df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
     st.session_state.ccsha = 0
     st.session_state.tasha = 0
     
