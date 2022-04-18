@@ -106,8 +106,6 @@ if st.session_state.page == 0 :
         selected_14 = st.checkbox('CDU')
     with col15:
         selected_15 = st.checkbox('IB')
-
-#col6,col7,col8,col9, = st.columns(4)
     with col16:
         selected_16 = st.checkbox('CN')
     with col17:
@@ -145,9 +143,6 @@ if st.session_state.page == 0 :
         puls_number_P = st.number_input('p_adjustment',min_value=0,step =1)
     with col_k1:
         puls_number_K = st.number_input('K_adjustment',min_value=0,step =1)
-    #puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
-    #puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
-    #puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
 
     puls_number_N = int(puls_number_N)
     puls_number_P = int(puls_number_P)
@@ -168,13 +163,10 @@ if st.session_state.page == 0 :
 #    if selected_K:
 #        df  = df.query('@k_amount_min <= K <= @k_amount_max')
 
-
-
     ccsha = st.checkbox('自社品')
     tasha = st.checkbox('他社品')
     kensaku = st.button('検索')
 
-    
     if kensaku:
         st.session_state.page = 1
         if ccsha:
@@ -182,19 +174,8 @@ if st.session_state.page == 0 :
 
         if tasha:
             st.session_state.tasha = 1    
-   
 
-          
 
-#    if selected_N:
-#        df  = df.query('@n_amount_min <= N <= @n_amount_max')
-#    if selected_P:
-#        df  = df.query('@p_amount_min <= P <= @p_amount_max')
-#    if selected_K:
-#        df  = df.query('@k_amount_min <= K <= @k_amount_max')
-
-#list_s = []
-#list_s = df["肥料業者"].unique()
 choices = ['日東エフシー株式会社']
 
 df  = df.query('@n_amount_min <= N <= @n_amount_max')
@@ -202,15 +183,10 @@ df  = df.query('@p_amount_min <= P <= @p_amount_max')
 df  = df.query('@k_amount_min <= K <= @k_amount_max')
 
 
-#if choices:
-#    df = df.query('肥料業者 == @choices')
-
-
-#st.write(f'ヒット件数:{long}')
 if st.session_state.page == 1:
+    
     col_cc,col_dd = st.columns(2)
     with col_cc:
-    #    st.write('自社品')
         if st.session_state.ccsha == 1:
             df_ji = df.query('肥料業者 == @choices')
             kazu = len(df_ji)
@@ -222,20 +198,20 @@ if st.session_state.page == 1:
                 st.session_state.page = 0
                 st.session_state.ccsha = 0
                 st.session_state.tasha = 0
-#                st.experimental_rerun() 
+#               st.experimental_rerun() 
+
     with col_dd:
-    #    st.write('他社品')
         if st.session_state.tasha == 1:
-            df_ji = df.query('肥料業者 != @choices')
-            kazu2 = len(df_ji)
+            df_j2 = df.query('肥料業者 != @choices')
+            kazu2 = len(df_j2)
             st.write(f'他社品:{kazu2}')
-            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
+            st.dataframe(df_j2[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
             modoru = st.button(' 戻る')
             if modoru:
                 st.session_state.page = 0
                 st.session_state.tasha = 0
                 st.session_state.ccsha = 0
- #               st.experimental_rerun() 
+#               st.experimental_rerun() 
 
 #st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
 
