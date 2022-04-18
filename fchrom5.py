@@ -118,7 +118,7 @@ with col_k:
     number_K = st.text_input('K',0,60)
 
 jisha = st.checkbox('自社品')
-tasha = st.checkbox('他社')
+tasha = st.checkbox('他社品')
 kensaku = st.button('検索')
 
 
@@ -142,10 +142,12 @@ if kensaku:
     col_cc,col_dd = st.columns(2)
     with col_cc:
         if jisha:
+            st.write('自社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=200, height=200)
 
     with col_dd:
         if jisha:
+            st.write('他社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=200, height=200)
 
 
