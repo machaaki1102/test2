@@ -51,7 +51,16 @@ k_amount_min = number_K - puls_number_K
 #    df = df[~df['登録番号'].str.contains('輸|外')]
 #if selected_gen:
 #    df = df[~df['登録番号'].str.startswith('第')]
-#
+def kensakuu():
+    if kensaku:
+        st.session_state.page = 1
+        if ccsha:
+            st.session_state.ccsha = 1
+
+        if tasha:
+            st.session_state.tasha = 1    
+    st.experimental_rerun()
+
 #home
 if 'page' not in st.session_state:
     st.session_state.page=0
@@ -126,19 +135,6 @@ if st.session_state.page == 0 :
 
     ccsha = st.checkbox('自社品')
     tasha = st.checkbox('他社品')
-
-def kensakuu():
-    if kensaku:
-        st.session_state.page = 1
-        if ccsha:
-            st.session_state.ccsha = 1
-
-        if tasha:
-            st.session_state.tasha = 1    
-    st.experimental_rerun()
-
-
-
     kensaku = st.button('検索',on_click=kensakuu)
 
  
