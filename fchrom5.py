@@ -159,12 +159,16 @@ if st.session_state.page == 1:
         if st.session_state.ccsha == 1:
             st.write('自社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
-
+            modoru = st.button('戻る')
+            if modoru:
+                st.session_state.page = 0
     with col_dd:
         if st.session_state.tasha == 1:
             st.write('他社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
-
+            modoru = st.button('戻る')
+            if modoru:
+                st.session_state.page = 0
 
 #st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
 
