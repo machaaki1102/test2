@@ -56,6 +56,9 @@ k_amount_min = number_K - puls_number_K
 if 'page' not in st.session_state:
     st.session_state.page=0
 
+st.session_state.ccsha = 0
+st.session_state.tasha = 0
+
 
 if st.session_state.page == 0 :
 
@@ -125,9 +128,8 @@ if st.session_state.page == 0 :
     tasha = st.checkbox('他社品')
     kensaku = st.button('検索')
 
-    
-    st.session_state.ccsha = 0
-    st.session_state.tasha = 0
+ 
+   
 
     if kensaku:
         st.session_state.page = 1
