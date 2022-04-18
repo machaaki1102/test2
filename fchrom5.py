@@ -61,7 +61,7 @@ st.header('検索画面')
 
 #c_number = len(c_box)
 #col_a,col_b = st.columns(2)
-st.write('製品カテゴリー')
+st.write('<製品カテゴリー>')
 
 #col_a,col_b = st.columns(2)
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
@@ -87,7 +87,7 @@ with col9:
     selected_9 = st.checkbox('その他')
 
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
-st.write('特長')
+st.write('<特長>')
 
 col11,col12,col13,col14,col15,col16,col17,col18,col19 = st.columns(9)
 with col11:
