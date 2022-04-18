@@ -136,7 +136,7 @@ if st.session_state.page == 0 :
     
     st.experimental_rerun()
         
-     
+#     
 #  st.experimental_rerun()    
 #    if selected_N:
 #        df  = df.query('@n_amount_min <= N <= @n_amount_max')
