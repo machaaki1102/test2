@@ -127,7 +127,13 @@ if st.session_state.page == 0 :
         
     if kensaku:
         st.session_state.page = 1
-#        st.experimental_rerun()    
+        if ccsha:
+            st.session_state.ccsha = 1
+
+    if kensaku:
+        if tasha:
+            st.session_state.tasha = 1     
+#  st.experimental_rerun()    
 #    if selected_N:
 #        df  = df.query('@n_amount_min <= N <= @n_amount_max')
 #    if selected_P:
@@ -142,17 +148,20 @@ if st.session_state.page == 0 :
 #if choices:
 #    df = df.query('肥料業者 == @choices')
 
+st.session_state.hoge = 1
+st.experimental_rerun()
+
 #long = len(df.index)
 #st.write(f'ヒット件数:{long}')
 if st.session_state.page == 1:
     col_cc,col_dd = st.columns(2)
     with col_cc:
-        if ccsha:
+        if st.session_state.ccsha == 1:
             st.write('自社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
 
     with col_dd:
-        if tasha:
+        if st.session_state.tasha == 1:
             st.write('他社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
 
