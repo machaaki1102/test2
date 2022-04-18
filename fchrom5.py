@@ -133,8 +133,8 @@ list_s = []
 list_s = df["肥料業者"].unique()
 #choices = st.multiselect('業者セレクト',list_s)
 
-if choices:
-    df = df.query('肥料業者 == @choices')
+#if choices:
+#    df = df.query('肥料業者 == @choices')
 
 long = len(df.index)
 st.write(f'ヒット件数:{long}')
