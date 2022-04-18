@@ -154,18 +154,18 @@ choices = ['日東エフシー株式会社']
 #if choices:
 #    df = df.query('肥料業者 == @choices')
 
-#long = len(df.index)
+long = len(df.index)
 #st.write(f'ヒット件数:{long}')
 if st.session_state.page == 1:
     col_cc,col_dd = st.columns(2)
     with col_cc:
     #    st.write('自社品')
         if st.session_state.ccsha == 1:
-            st.write('自社品')
             df_ji = df.query('肥料業者 == @choices')
+            kazu = len(df_ji)
+            st.write(f'自社品:{kazu}')
             st.dataframe(df_ji[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
             #st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]].query('肥料業者 == @choices'),width=500, height=500)
-            
             modoru = st.button('戻る ')
             if modoru:
                 st.session_state.page = 0
@@ -175,7 +175,9 @@ if st.session_state.page == 1:
     with col_dd:
     #    st.write('他社品')
         if st.session_state.tasha == 1:
-            st.write('他社品')
+            df_ji = df.query('肥料業者 != @choices')
+            kazu2 = len(df_ji)
+            st.write(f'他社品:{kazu2}')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
             modoru = st.button(' 戻る')
             if modoru:
