@@ -7,7 +7,7 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
 #body
 #sidebar
-st.sidebar.write('select')
+#st.sidebar.write('select')
 
 #with st.sidebar:
 #    col1, col2,col3 = st.columns(3)
@@ -18,9 +18,9 @@ st.sidebar.write('select')
 #    with col3:
 #        selected_K = st.checkbox('K')
 
-number_N = st.sidebar.slider('N',0,60)
-number_P = st.sidebar.slider('P',0,60)
-number_K = st.sidebar.slider('K',0,60)
+#number_N = st.sidebar.slider('N',0,60)
+#number_P = st.sidebar.slider('P',0,60)
+#number_K = st.sidebar.slider('K',0,60)
 
 puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
 puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
@@ -40,17 +40,17 @@ k_amount_max = number_K + puls_number_K
 k_amount_min = number_K - puls_number_K
 
 #化成＝生、輸入＝輸、なし＝原料
-with st.sidebar:
-    selected_sei = st.checkbox('製造肥料を除外する')
-    selected_you = st.checkbox('輸入品を除外する')
-    selected_gen = st.checkbox('有機原料を除外する')
+#with st.sidebar:
+#    selected_sei = st.checkbox('製造肥料を除外する')
+#    selected_you = st.checkbox('輸入品を除外する')
+#    selected_gen = st.checkbox('有機原料を除外する')
 
-if selected_sei:
-    df = df[~df['登録番号'].str.contains('生')]
-if selected_you:
-    df = df[~df['登録番号'].str.contains('輸|外')]
-if selected_gen:
-    df = df[~df['登録番号'].str.startswith('第')]
+#if selected_sei:
+#    df = df[~df['登録番号'].str.contains('生')]
+#if selected_you:
+#    df = df[~df['登録番号'].str.contains('輸|外')]
+#if selected_gen:
+#    df = df[~df['登録番号'].str.startswith('第')]
 
 #home
 st.header('検索画面')
@@ -109,13 +109,13 @@ with col18:
 with col19:
     selected_19 = st.checkbox('被覆')
 
-col_n,col_p,con_k = st.columns(3)
+col_n,col_p,col_k = st.columns(3)
 with col_n:
-    number_N = st.number_input('N',0,60)
+    number_N = st.text_input('N',0,60)
 with col_p:
-    number_P = st.number_input('P',0,60)
+    number_P = st.text_input('P',0,60)
 with col_k:
-    number_K = st.number_inpit('K',0,60)
+    number_K = st.text_inpit('K',0,60)
 
 puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
 puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
