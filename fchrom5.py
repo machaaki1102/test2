@@ -126,7 +126,7 @@ if st.session_state.page == 0 :
     kensaku = st.button('検索')
         
     if kensaku:
-        st.session_sate.page = 1
+        st.session_state.page = 1
 
 #    if selected_N:
 #        df  = df.query('@n_amount_min <= N <= @n_amount_max')
@@ -144,7 +144,7 @@ if st.session_state.page == 0 :
 
 #long = len(df.index)
 #st.write(f'ヒット件数:{long}')
-if st.session_sate.page == 1:
+if st.session_state.page == 1:
     col_cc,col_dd = st.columns(2)
     with col_cc:
         if jisha:
