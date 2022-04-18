@@ -135,7 +135,7 @@ if st.session_state.page == 0 :
 
     ccsha = st.checkbox('自社品')
     tasha = st.checkbox('他社品')
-    kensaku = st.button('検索',on_click=ken)
+    kensaku = st.button('検索')
 
     
     if kensaku:
