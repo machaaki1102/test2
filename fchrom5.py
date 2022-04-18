@@ -137,10 +137,17 @@ if st.session_state.page == 0 :
     tasha = st.checkbox('他社品')
     kensaku = st.button('検索',on_click=ken)
 
- 
+    
+    if kensaku:
+        st.session_state.page = 1
+        if ccsha:
+            st.session_state.ccsha = 1
+
+        if tasha:
+            st.session_state.tasha = 1    
    
 
-#          
+          
 #  st.experimental_rerun()    
 #    if selected_N:
 #        df  = df.query('@n_amount_min <= N <= @n_amount_max')
