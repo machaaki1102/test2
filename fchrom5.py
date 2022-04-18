@@ -11,11 +11,10 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 if 'page' not in st.session_state:
     st.session_state.page=0
 
-st.session_state.ccsha = 0
-st.session_state.tasha = 0
-
-
 if st.session_state.page == 0 :
+    st.session_state.ccsha = 0
+    st.session_state.tasha = 0
+    
     st.header('検索画面')
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
