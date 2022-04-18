@@ -156,8 +156,9 @@ if st.session_state.page == 0 :
 if st.session_state.page == 1:
     col_cc,col_dd = st.columns(2)
     with col_cc:
+        st.write('自社品')
         if st.session_state.ccsha == 1:
-            st.write('自社品')
+        #    st.write('自社品')
             st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=500, height=500)
             modoru = st.button('戻る ')
             if modoru:
