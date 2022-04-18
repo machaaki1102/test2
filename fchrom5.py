@@ -94,6 +94,10 @@ if st.session_state.page == 0 :
     k_amount_max = number_K + puls_number_K
     k_amount_min = number_K - puls_number_K
 
+    df  = df.query('@n_amount_min <= N <= @n_amount_max')
+    df  = df.query('@p_amount_min <= P <= @p_amount_max')
+    df  = df.query('@k_amount_min <= K <= @k_amount_max')
+
 #        df  = df.query('@n_amount_min <= N <= @n_amount_max')
 #    if selected_P:
 #        df  = df.query('@p_amount_min <= P <= @p_amount_max')
@@ -116,9 +120,9 @@ if st.session_state.page == 0 :
 
 choices = ['日東エフシー株式会社']
 
-df  = df.query('@n_amount_min <= N <= @n_amount_max')
-df  = df.query('@p_amount_min <= P <= @p_amount_max')
-df  = df.query('@k_amount_min <= K <= @k_amount_max')
+#df  = df.query('@n_amount_min <= N <= @n_amount_max')
+#df  = df.query('@p_amount_min <= P <= @p_amount_max')
+#df  = df.query('@k_amount_min <= K <= @k_amount_max')
 
 
 if st.session_state.page == 1:
