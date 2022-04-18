@@ -129,19 +129,31 @@ if selected_P:
 if selected_K:
     df  = df.query('@k_amount_min <= K <= @k_amount_max')
 
-list_s = []
-list_s = df["肥料業者"].unique()
+#list_s = []
+#list_s = df["肥料業者"].unique()
 #choices = st.multiselect('業者セレクト',list_s)
 
 #if choices:
 #    df = df.query('肥料業者 == @choices')
 
-long = len(df.index)
-st.write(f'ヒット件数:{long}')
-st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
+#long = len(df.index)
+#st.write(f'ヒット件数:{long}')
+if kensaku:
+    col_cc,col_dd = st.columns(2)
+    with col_cc:
+        if jisha:
+            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=200, height=200)
 
-list_c = df['登録番号'].unique()
-s = st.multiselect('登録番号よりチラシ',list_c)
+    with col_dd:
+        if jisha:
+            st.dataframe(df[["肥料の名称","N","P","K","肥料種類名称"]],width=200, height=200)
+
+
+#st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
+
+
+#list_c = df['登録番号'].unique()
+#s = st.multiselect('登録番号よりチラシ',list_c)
 #st.write(s)#s = st.text_input('登録番号')
 try:
     if s[0] == '生第10000号':
