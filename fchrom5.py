@@ -6,52 +6,6 @@ from PIL import Image
 df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
 #body
-#sidebar
-#st.sidebar.write('select')
-
-#検索機能
-#with st.sidebar:
-#    col1, col2,col3 = st.columns(3)
-#    with col1:
-#        selected_N = st.checkbox('N')
-#    with col2:
-#        selected_P = st.checkbox('P')
-#    with col3:
-#        selected_K = st.checkbox('K')
-
-#number_N = st.sidebar.slider('N',0,60)
-#number_P = st.sidebar.slider('P',0,60)
-#number_K = st.sidebar.slider('K',0,60)
-
-#puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
-#puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
-#puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
-
-#puls_number_N = int(puls_number_N)
-#puls_number_P = int(puls_number_P)
-#puls_number_K = int(puls_number_K)
-
-#n_amount_max = number_N + puls_number_N
-#n_amount_min = number_N - puls_number_N
-
-#p_amount_max = number_P + puls_number_P
-#p_amount_min = number_P - puls_number_P
-
-#k_amount_max = number_K + puls_number_K
-#k_amount_min = number_K - puls_number_K
-
-#化成＝生、輸入＝輸、なし＝原料
-#with st.sidebar:
-#    selected_sei = st.checkbox('製造肥料を除外する')
-#    selected_you = st.checkbox('輸入品を除外する')
-#    selected_gen = st.checkbox('有機原料を除外する')
-
-#if selected_sei:
-#    df = df[~df['登録番号'].str.contains('生')]
-#if selected_you:
-#    df = df[~df['登録番号'].str.contains('輸|外')]
-#if selected_gen:
-#    df = df[~df['登録番号'].str.startswith('第')]
 
 #home
 if 'page' not in st.session_state:
@@ -62,13 +16,9 @@ st.session_state.tasha = 0
 
 
 if st.session_state.page == 0 :
-
     st.header('検索画面')
-#st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
-#c_number = len(c_box)
-#col_a,col_b = st.columns(2)
     st.write('<製品カテゴリ>')
 
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他'] 
@@ -123,19 +73,6 @@ if st.session_state.page == 0 :
     with col_k:
         number_K = st.number_input('K',0,60)
 
-#検索機能
-#with st.sidebar:
-#    col1, col2,col3 = st.columns(3)
-#    with col1:
-#        selected_N = st.checkbox('N')
-#    with col2:
-#        selected_P = st.checkbox('P')
-#    with col3:
-#        selected_K = st.checkbox('K')
-
-#number_N = st.sidebar.slider('N',0,60)
-#number_P = st.sidebar.slider('P',0,60)
-#number_K = st.sidebar.slider('K',0,60)
     col_n1,col_p1,col_k1 = st.columns(3)
     with col_n1:
         puls_number_N = st.number_input('N_adjustment',min_value=0,step =1)
@@ -163,6 +100,7 @@ if st.session_state.page == 0 :
 #    if selected_K:
 #        df  = df.query('@k_amount_min <= K <= @k_amount_max')
 
+    
     ccsha = st.checkbox('自社品')
     tasha = st.checkbox('他社品')
     kensaku = st.button('検索')
