@@ -121,7 +121,7 @@ choices = ['日東エフシー株式会社']
 
 
 if st.session_state.page == 1:
-    
+    st.dataframe(df)    
     col_cc,col_dd = st.columns(2)
     with col_cc:
         if st.session_state.ccsha == 1:
