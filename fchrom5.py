@@ -59,8 +59,8 @@ st.header('検索画面')
 c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
 t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
 
-c_select = st.selectbox('製品ｶﾃｺﾞﾘｰ',c_box)
-t_select = st.selectbox('特長',t_box)
+c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
+t_select = st.checkbox('特長',t_box)
 
 
 if selected_N:
