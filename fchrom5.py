@@ -115,7 +115,7 @@ with col_n:
 with col_p:
     number_P = st.text_input('P',0,60)
 with col_k:
-    number_K = st.text_inpit('K',0,60)
+    number_K = st.text_input('K',0,60)
 
 #puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
 #puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
