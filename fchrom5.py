@@ -56,10 +56,35 @@ if selected_gen:
 st.header('検索画面')
 #st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
 
-c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
-t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
+#c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
+#t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
 
-c_select = st.radio('製品ｶﾃｺﾞﾘｰ',c_box)
+#c_number = len(c_box)
+
+st.write('製品カテゴリー')
+col1,col2,col3,col4,col5,col6,col7,col8,col9, = st.columns(9)
+with col1:
+    selected_1 = st.checkbox('化成')
+with col2:
+    selected_2 = st.checkbox('配合')
+with col3:
+    selected_3 = st.checkbox('液肥')
+with col4:
+    selected_4 = st.checkbox('苦土')
+with col5:
+    selected_5 = st.checkbox('燐肥')
+with col6:
+    selected_6 = st.checkbox('粉末')
+with col7:
+    selected_7 = st.checkbox('土改')
+with col8:
+    selected_8 = st.checkbox('BS')
+with col9:
+    selected_9 = st.checkbox('その他')
+
+
+c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
+
 t_select = st.radio('特長',t_box)
 
 
