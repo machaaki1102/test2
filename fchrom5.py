@@ -121,8 +121,8 @@ with col_k:
 #puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
 #puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
 
-
-
+jisha = st.checkbox('自社品')
+tasha = st.checkbox('他社')
 #c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
 
 #t_select = st.radio('特長',t_box)
