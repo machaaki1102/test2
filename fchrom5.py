@@ -9,14 +9,14 @@ df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 #sidebar
 st.sidebar.write('select')
 
-with st.sidebar:
-    col1, col2,col3 = st.columns(3)
-    with col1:
-        selected_N = st.checkbox('N')
-    with col2:
-        selected_P = st.checkbox('P')
-    with col3:
-        selected_K = st.checkbox('K')
+#with st.sidebar:
+#    col1, col2,col3 = st.columns(3)
+#    with col1:
+#        selected_N = st.checkbox('N')
+#    with col2:
+#        selected_P = st.checkbox('P')
+#    with col3:
+#        selected_K = st.checkbox('K')
 
 number_N = st.sidebar.slider('N',0,60)
 number_P = st.sidebar.slider('P',0,60)
@@ -66,6 +66,7 @@ st.write('製品カテゴリー')
 #col_a,col_b = st.columns(2)
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
 col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.columns(9)
+#col1,col2,col3 = st.columns(3)
 with col1:
     selected_1 = st.checkbox('化成')
 with col2:
