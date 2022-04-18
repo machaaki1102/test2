@@ -119,11 +119,11 @@ if st.session_state.page == 0 :
 
     col_n,col_p,col_k = st.columns(3)
     with col_n:
-        number_N = st.text_input('N',0,60)
+        number_N = st.number_input('N',0,60)
     with col_p:
-        number_P = st.text_input('P',0,60)
+        number_P = st.number_input('P',0,60)
     with col_k:
-        number_K = st.text_input('K',0,60)
+        number_K = st.number_input('K',0,60)
 
 #検索機能
 #with st.sidebar:
