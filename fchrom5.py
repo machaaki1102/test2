@@ -111,9 +111,9 @@ with col19:
 
 col_n,col_p,con_k = st.columns(3)
 
-number_N = col_n.st.slider('N',0,60)
-number_P = col_p.st.slider('P',0,60)
-number_K = col.k.st.slider('K',0,60)
+number_N = col_n.st.number_input('N',0,60)
+number_P = col_p.st.number_input('P',0,60)
+number_K = col_k.st.number_inpit('K',0,60)
 
 puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
 puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
