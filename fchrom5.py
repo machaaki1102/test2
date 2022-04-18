@@ -51,15 +51,6 @@ k_amount_min = number_K - puls_number_K
 #    df = df[~df['登録番号'].str.contains('輸|外')]
 #if selected_gen:
 #    df = df[~df['登録番号'].str.startswith('第')]
-def ken():
-    if kensaku:
-        st.session_state.page = 1
-        if ccsha:
-            st.session_state.ccsha = 1
-
-        if tasha:
-            st.session_state.tasha = 1    
-#    st.experimental_rerun()
 
 #home
 if 'page' not in st.session_state:
@@ -176,7 +167,7 @@ if st.session_state.page == 1:
             if modoru:
                 st.session_state.page = 0
                 st.session_state.ccsha = 0
-                st.experimental_rerun() 
+#                st.experimental_rerun() 
     with col_dd:
     #    st.write('他社品')
         if st.session_state.tasha == 1:
@@ -186,7 +177,7 @@ if st.session_state.page == 1:
             if modoru:
                 st.session_state.page = 0
                 st.session_state.tasha = 0
-                st.experimental_rerun() 
+#                st.experimental_rerun() 
 
 #st.dataframe(df[["肥料の名称","肥料業者","N","P","K","肥料種類名称","登録番号"]],width=1200, height=500)
 
