@@ -53,8 +53,8 @@ if selected_gen:
     df = df[~df['登録番号'].str.startswith('第')]
 
 #home
-#st.header('検索システム')
-st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
+st.header('検索画面')
+#st.write(f'N:{number_N} ± {puls_number_N}  P:{number_P} ± {puls_number_P} K:{number_K} ± {puls_number_K}')
 
 c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他']
 t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
