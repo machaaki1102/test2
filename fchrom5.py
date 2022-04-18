@@ -60,30 +60,30 @@ st.header('検索画面')
 #t_box = ['Dd','ASU','UF','CDU','IB','CN','亜ﾘﾝ','微量','被覆']
 
 #c_number = len(c_box)
+col_a,col_b = st.columns(2)
+    st.write('製品カテゴリー')
+    col1,col2,col3,col4,col5 = st.columns(5)
+    with col1:
+        selected_1 = st.checkbox('化成')
+    with col2:
+        selected_2 = st.checkbox('配合')
+    with col3:
+        selected_3 = st.checkbox('液肥')
+    with col4:
+        selected_4 = st.checkbox('苦土')
+    with col5:
+        selected_5 = st.checkbox('燐肥')
 
-st.write('製品カテゴリー')
-col1,col2,col3,col4,col5 = st.columns(5)
-with col1:
-    selected_1 = st.checkbox('化成')
-with col2:
-    selected_2 = st.checkbox('配合')
-with col3:
-    selected_3 = st.checkbox('液肥')
-with col4:
-    selected_4 = st.checkbox('苦土')
-with col5:
-    selected_5 = st.checkbox('燐肥')
+    col6,col7,col8,col9, = st.columns(4)
 
-col6,col7,col8,col9, = st.columns(4)
-
-with col6:
-    selected_6 = st.checkbox('粉末')
-with col7:
-    selected_7 = st.checkbox('土改')
-with col8:
-    selected_8 = st.checkbox('BS')
-with col9:
-    selected_9 = st.checkbox('その他')
+    with col6:
+        selected_6 = st.checkbox('粉末')
+    with col7:
+        selected_7 = st.checkbox('土改')
+    with col8:
+        selected_8 = st.checkbox('BS')
+    with col9:
+        selected_9 = st.checkbox('その他')
 
 
 #c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
