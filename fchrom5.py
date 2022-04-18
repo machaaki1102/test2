@@ -61,7 +61,7 @@ st.header('検索画面')
 
 #c_number = len(c_box)
 #col_a,col_b = st.columns(2)
-st.write('<製品カテゴリー>')
+st.write('<製品カテゴリ>')
 
 #c_box = ['化成','配合','液肥','苦土','燐肥','粉末','土改','BS','その他'] 
 col1,col2,col3,col4,col5,col6,col7,col8,col9 = st.columns(9)
