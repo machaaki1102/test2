@@ -51,7 +51,7 @@ k_amount_min = number_K - puls_number_K
 #    df = df[~df['登録番号'].str.contains('輸|外')]
 #if selected_gen:
 #    df = df[~df['登録番号'].str.startswith('第')]
-
+#
 #home
 if 'page' not in st.session_state:
     st.session_state.page=0
