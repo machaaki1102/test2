@@ -132,7 +132,11 @@ if st.session_state.page == 0 :
 
     if kensaku:
         if tasha:
-            st.session_state.tasha = 1     
+            st.session_state.tasha = 1
+    
+    st.experimental_rerun()
+        
+     
 #  st.experimental_rerun()    
 #    if selected_N:
 #        df  = df.query('@n_amount_min <= N <= @n_amount_max')
@@ -146,10 +150,7 @@ if st.session_state.page == 0 :
 #choices = st.multiselect('業者セレクト',list_s)
 
 #if choices:
-#    df = df.query('肥料業者 == @choices')
-
-st.session_state.hoge = 1
-st.experimental_rerun()
+#    df = df.query('肥料業者 == @choices'
 
 #long = len(df.index)
 #st.write(f'ヒット件数:{long}')
