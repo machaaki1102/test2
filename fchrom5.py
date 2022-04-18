@@ -140,11 +140,11 @@ if st.session_state.page == 0 :
 #number_K = st.sidebar.slider('K',0,60)
     col_n1,col_p1,col_k1 = st.columns(3)
     with col_n1:
-        puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
+        puls_number_N = st.number_input('N_adjustment',min_value=0,step =1)
     with col_p1:
-        puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
+        puls_number_P = st.number_input('p_adjustment',min_value=0,step =1)
     with col_k1:
-        puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
+        puls_number_K = st.number_input('K_adjustment',min_value=0,step =1)
     #puls_number_N = st.sidebar.number_input('N_adjustment',min_value=0,step =1)
     #puls_number_P = st.sidebar.number_input('p_adjustment',min_value=0,step =1)
     #puls_number_K = st.sidebar.number_input('K_adjustment',min_value=0,step =1)
