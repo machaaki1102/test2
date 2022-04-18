@@ -86,9 +86,9 @@ with col9:
     selected_9 = st.checkbox('その他')
 
 
-c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
+#c_select = st.checkbox('製品ｶﾃｺﾞﾘｰ',c_box)
 
-t_select = st.radio('特長',t_box)
+#t_select = st.radio('特長',t_box)
 
 
 if selected_N:
