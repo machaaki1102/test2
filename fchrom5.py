@@ -51,7 +51,7 @@ k_amount_min = number_K - puls_number_K
 #    df = df[~df['登録番号'].str.contains('輸|外')]
 #if selected_gen:
 #    df = df[~df['登録番号'].str.startswith('第')]
-def kensakuu():
+def ken():
     if kensaku:
         st.session_state.page = 1
         if ccsha:
@@ -59,7 +59,7 @@ def kensakuu():
 
         if tasha:
             st.session_state.tasha = 1    
-    st.experimental_rerun()
+#    st.experimental_rerun()
 
 #home
 if 'page' not in st.session_state:
