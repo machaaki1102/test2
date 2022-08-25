@@ -23,6 +23,8 @@ pysqlite3 = "^0.4.7"
 pip = "^22.0.4"
 ps = "^0.0.2"
 openpyxl = "^3.0.9"
+google-cloud = "^0.34.0"
+appengine-python-standard = "^1.0.0"
 
 
 [tool.poetry.dev-dependencies]
