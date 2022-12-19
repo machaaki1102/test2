@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image    
-
+#dd
 #データ
 df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
 
