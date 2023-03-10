@@ -105,10 +105,7 @@ if img is not None:
 if img:
   csv = df9.to_csv()
 #.encode('utf-8')
-  st.download_button('緯度経度情報をダウンロード',
-  data = csv,
-  file_name = 'lat_lon.csv'
-  )
+  st.download_button('緯度経度情報をダウンロード',data = csv,file_name = 'lat_lon.csv')
   
   st.button('URL土壌インベントリ―',on_click=dojou)
 #  st.button('土壌インベントリ(土性）',on_click=dsei)

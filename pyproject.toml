@@ -5,7 +5,7 @@ description = ""
 authors = ["github <github>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.9.10"
 streamlit = "^1.7.0"
 pandas = "^1.4.1"
 matplotlib = "^3.5.1"
