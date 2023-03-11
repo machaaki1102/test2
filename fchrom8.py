@@ -4,7 +4,7 @@ from PIL import Image
 
 #データ
 df = pd.read_csv('finished_data.csv',index_col=0,encoding='cp932')
-
+#
 #body1
 
 #home
